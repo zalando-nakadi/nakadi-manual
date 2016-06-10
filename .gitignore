@@ -15,4 +15,5 @@ _book
 *.mobi
 *.pdf
 
+.DS_Store
 scratch.md
