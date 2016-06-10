@@ -1,0 +1,13 @@
+{ 
+  
+  "structure": { 
+    "summary": "SUMMARY.md", 
+    "readme": "README.md" 
+  }, 
+ "plugins": [
+ 	"-sharing", 
+ 	"-search", 
+ 	"-highlight",
+ 	 "anchors"
+ ]
+}

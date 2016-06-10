@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "docs:prepare": "gitbook install",
+    "docs:build": "npm run docs:prepare && npm run docs:genapi && rm -rf _book && gitbook build && rm -rf _book/bin",
+    "docs:watch": "npm run docs:prepare && gitbook serve",
+    "docs:publish": "npm run docs:build && cd _book && git init && git commit --allow-empty -m 'Update docs' && git checkout -b gh-pages && git add . && git commit -am 'Update docs' && git push https://$GH_PAGES_TOKEN@github.com/zalando/nakadi-manual gh-pages --force",
+    "docs:genapi": "java -cp 'bin/s2m.jar:bin/s2m-extension-commons.jar:bin/s2m-import-files-ext.jar' io.github.swagger2markup.cli.Application convert -c ./bin/s2m-config.properties -d ./docs/api-spec-generated -i ./docs/api-spec-oai/nakadi-oai-current.yaml"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.2.0"
+  }
+}
