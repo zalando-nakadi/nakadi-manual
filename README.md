@@ -34,4 +34,4 @@ Before making a contribution, please let us know by posting a comment to the rel
 
 ### About
 
-This book is generated using Gitbook and published to GitHub Pages via [a Travis CI build](https://travis-ci.org/dehora/nakadi-book-spike). The project is [here](https://github.com/zalando/nakadi-manual) and the toolchain is described [here](https://github.com/zalando/nakadi-manual/blob/master/HOWTO.md). The project has an [MIT License](https://github.com/zalando/nakadi-manual/blob/master/LICENSE).
+This book is generated using Gitbook and published to GitHub Pages via [a Travis CI build](https://travis-ci.org/zalando/nakadi-manual). The project is [here](https://github.com/zalando/nakadi-manual) and the toolchain is described [here](https://github.com/zalando/nakadi-manual/blob/master/HOWTO.md). The project has an [MIT License](https://github.com/zalando/nakadi-manual/blob/master/LICENSE).
