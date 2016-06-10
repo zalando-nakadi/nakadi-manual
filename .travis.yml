@@ -1,0 +1,19 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+- 5.10.1
+install:
+- npm install
+script:
+- jdk_switcher use oraclejdk8
+- bash ./bin/gh_pages_publish.sh
+env:
+  global:
+    secure: N5FaRYc1RDS9YYECdcQwr1yJUjBQlzSQ1wrECw9lIlczzh6JIsHK2P6wKFkV+zGwR85nmg3O6GjtCdEIbQRyWd6SY+jB746gunYrbiyCkXPBCwK40JlRA1jhfHQUfBN/aiGBq69pba2yfItG73QvW2eP1Jj9eFdnc2SYehNy+cQLXhXM/79bOgJPDq5EwcR1k9+ci6snXc5QZL5gWM1UsJrbfHVHuT5dRATIT6bYTlZewG9PeysnnMp3tEEkFO966QVjYUJBsXb4OrcozPuyBYWkaA6KJHD7NNTh14OnBtwk/V3n3N5ccbinUrMeuU+85y1UwTboMwUOmPsAxkj0dRGpAm1iqKSEFJVBCdh1Qk/2y30qAcxD9LOfjsXVNgBhcse8FYrCYVafv+sBT0FkmjAsvgY6EhPWgPztiFyU84xIcdGimwGLkbmNr0f0QYkxHs0Nd8rCDd/DizJbGgHF6Dgg1bhOcTTeQZnty0mLDxn6ArbmJL9nHyeBg6Zc/8sXkYEolVPWdCb3yfBRu/owu5tZYBYZuVNDVUpuxSXx2bkf5LeSH2aGEe3eV8wgD3UF2U1AuA53NVJu70fEEG/TBrtF/SYgpA+gvfzcPBGU4BkZpV1beMEOZdAf6z02GpB7uC0LBH3Pl+Dhbj3g8m29YjDlFbqT1f+Hygdd93I/3jA=
+notifications:
+  email:
+    recipients:
+    - bill@dehora.net
+    on_success: always
+    on_failure: always
