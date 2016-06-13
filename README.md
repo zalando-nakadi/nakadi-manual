@@ -1,7 +1,7 @@
 # Nakadi Reference Manual
 
 
-Nakadi is a distributed, open source event broker. The project is being developed by [Zalando](https://zalando.github.io/) and is available on [Github](https://github.com/zalando/nakadi). 
+**Nakadi** is a distributed, open-source event broker under development at [Zalando](https://zalando.github.io/). It is [available on GitHub](https://github.com/zalando/nakadi). 
 
 ### Why Nakadi?
 
