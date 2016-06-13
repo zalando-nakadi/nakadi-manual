@@ -9,7 +9,7 @@ In this section, we'll look at how Nakadi fits in with the stream broker/process
   - [Confluent Platform](#confluent)
 
 <a name="kafka"></a>
-### Apache Kafka
+### Apache Kafka (version 0.9)
 
 Relative to Apache Kafka, Nakadi provides a number of benefits while still leveraging the raw power of Kafka as its internal broker. 
 
