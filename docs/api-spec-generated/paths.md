@@ -50,7 +50,7 @@ status (details are provided in the Problem object):
 * Using `EventTypeSchema.type` other than json-schema or passing a `EventTypeSchema.schema`
 that is invalid with respect to the schema's type. Rejects with 422 Unprocessable entity.
 
-* Referring any of Validation, Enrichment or Partition strategies that does not exist or
+* Referring any Enrichment or Partition strategies that do not exist or
 whose parametrization is deemed invalid. Rejects with 422 Unprocessable entity.
 
 Nakadi MIGHT impose necessary schema, validation and enrichment minimal configurations that
@@ -75,8 +75,6 @@ defined at this time and might not be exposed in the API.**
 |**401**|Client is not authenticated|[Problem](definitions.md#problem)|
 |**409**|Conflict, for example on creation of EventType with already existing name.|[Problem](definitions.md#problem)|
 |**422**|Unprocessable Entity|[Problem](definitions.md#problem)|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
 
 
 #### Tags
@@ -111,8 +109,6 @@ Returns a list of all registered `EventType`s
 |---|---|---|
 |**200**|Ok|< [EventType](definitions.md#eventtype) > array|
 |**401**|Client is not authenticated|[Problem](definitions.md#problem)|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
 
 
 #### Tags
@@ -141,9 +137,6 @@ Returns the `EventType` identified by its name.
 |---|---|---|
 |**200**|Ok|[EventType](definitions.md#eventtype)|
 |**401**|Client is not authenticated|[Problem](definitions.md#problem)|
-|**404**|EventType not found|[Problem](definitions.md#problem)|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
 
 
 #### Tags
@@ -179,10 +172,7 @@ failure. (todo: define conditions for backwards compatible extensions in the sch
 |---|---|---|
 |**200**|Ok|No Content|
 |**401**|Client is not authenticated|[Problem](definitions.md#problem)|
-|**404**|EventType not found.|[Problem](definitions.md#problem)|
 |**422**|Unprocessable Entity|[Problem](definitions.md#problem)|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
 
 
 #### Tags
@@ -204,7 +194,7 @@ failure. (todo: define conditions for backwards compatible extensions in the sch
 Deletes an `EventType` identified by its name. All events in the `EventType`'s stream' will
 also be removed. **Note**: deletion happens asynchronously, which has the following
 consequences:
-
+ 
  * Creation of an equally named `EventType` before the underlying topic deletion is complete
  might not succeed (failure is a 409 Conflict).
 
@@ -225,10 +215,6 @@ consequences:
 |---|---|---|
 |**200**|EventType is successfuly removed|No Content|
 |**401**|Client is not authenticated|[Problem](definitions.md#problem)|
-|**403**|Client is not authorized to perform this operation|[Problem](definitions.md#problem)|
-|**404**|EventType not found.|[Problem](definitions.md#problem)|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
 
 
 #### Tags
@@ -254,7 +240,7 @@ Reception of Events will always respect the configuration of its `EventType` wit
 validation, enrichment and partition. The steps performed on reception of incoming message
 are:
 
-1. Every validation rule specified in the `EventType` will be checked in order against the
+1. Every validation rule specified for the `EventType` will be checked in order against the
 incoming Events. Validation rules are evaluated in the order they are defined and the Event
 is **rejected** in the first case of failure. If the offending validation rule provides
 information about the violation it will be included in the `BatchItemResponse`.  If the
@@ -292,13 +278,8 @@ partitions. Failures at this stage will fail only the affected partitions.
 |---|---|---|
 |**200**|All events in the batch have been successfully published.|No Content|
 |**207**|At least one event has failed to be submitted. The batch might be partially submitted.|< [BatchItemResponse](definitions.md#batchitemresponse) > array|
-|**400**|Bad request|[Problem](definitions.md#problem)|
 |**401**|Client is not authenticated|[Problem](definitions.md#problem)|
-|**404**|EventType not found.|[Problem](definitions.md#problem)|
-|**405**|Not allowed.|[Problem](definitions.md#problem)|
 |**422**|At least one event failed to be validated, enriched or partitioned. None were submitted.|< [BatchItemResponse](definitions.md#batchitemresponse) > array|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
 
 
 #### Tags
@@ -354,7 +335,7 @@ is in the responsibility of the client. No commits are needed.
 |**Query**|**batch_limit**  <br>*optional*|Maximum number of `Event`s in each chunk (and therefore per partition) of the stream.<br><br>* If 0 or unspecified will buffer Events indefinitely and flush on reaching of<br>`batch_flush_timeout`.|integer(int32)|`"1"`|
 |**Query**|**stream_keep_alive_limit**  <br>*optional*|Maximum number of keep-alive messages to get in a row before closing the connection.<br><br>If 0 or undefined will send keep alive messages indefinitely.|integer(int32)|`"0"`|
 |**Query**|**stream_limit**  <br>*optional*|Maximum number of `Event`s in this stream (over all partitions being streamed in this<br>connection).<br><br>* If 0 or undefined, will stream batches indefinitely.<br><br>* Stream initialization will fail if `stream_limit` is lower than `batch_limit`.|integer(int32)|`"0"`|
-|**Query**|**stream_timeout**  <br>*optional*|Maximum time in seconds a stream will live before being interrupted.<br>If 0 or unspecified will stream indefinitely.<br><br>If this timeout is reached, any pending messages (in the sense of `stream_limit`) will<br>be flushed to the client.<br><br>Stream initialization will fail if `stream_timeout` is lower than `batch_flush_timeout`.|number(int32)|`"0"`|
+|**Query**|**stream_timeout**  <br>*optional*|Maximum time in seconds a stream will live before being interrupted.<br>If value is zero, streams indefinitely.<br><br>If this timeout is reached, any pending messages (in the sense of `stream_limit`) will<br>be flushed to the client.<br><br>Stream initialization will fail if `stream_timeout` is lower than `batch_flush_timeout`.|number(int32)|`"60"`|
 
 
 #### Responses
@@ -362,12 +343,8 @@ is in the responsibility of the client. No commits are needed.
 |HTTP Code|Description|Schema|
 |---|---|---|
 |**200**|Starts streaming to the client.<br>Stream format is a continuous series of `EventStreamBatch`s separated by `\n`|[EventStreamBatch](definitions.md#eventstreambatch)|
-|**400**|Bad syntax|[Problem](definitions.md#problem)|
 |**401**|Not authenticated|[Problem](definitions.md#problem)|
-|**404**|EventType not found|[Problem](definitions.md#problem)|
 |**422**|Unprocessable entity|[Problem](definitions.md#problem)|
-|**500**|Internal Server Error. Details are provided on the returned `Problem`.|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
 
 
 #### Produces
@@ -411,9 +388,7 @@ to start consuming older messages.
 |HTTP Code|Description|Schema|
 |---|---|---|
 |**200**|OK|< [Partition](definitions.md#partition) > array|
-|**404**|EventType not found|[Problem](definitions.md#problem)|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
+|**401**|Client is not authenticated|[Problem](definitions.md#problem)|
 
 
 #### Tags
@@ -452,9 +427,6 @@ Returns the given `Partition` of this EventType
 |---|---|---|
 |**200**|OK|[Partition](definitions.md#partition)|
 |**401**|Client is not authenticated|[Problem](definitions.md#problem)|
-|**404**|Not found|[Problem](definitions.md#problem)|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
 
 
 #### Tags
@@ -470,28 +442,6 @@ Returns the given `Partition` of this EventType
 |**oauth2**|**[oauth2](security.md#oauth2)**|nakadi.event_stream.read|
 
 
-<a name="metrics-get"></a>
-### Get monitoring metrics
-```
-GET /metrics
-```
-
-
-#### Responses
-
-|HTTP Code|Description|Schema|
-|---|---|---|
-|**200**|Ok|[Metrics](definitions.md#metrics)|
-|**401**|Client is not authenticated|[Problem](definitions.md#problem)|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
-
-
-#### Tags
-
-* monitoring
-
-
 <a name="registry-enrichment-strategies-get"></a>
 ### GET /registry/enrichment-strategies
 
@@ -505,8 +455,7 @@ custom strategies besides the defaults will be listed here.
 |HTTP Code|Description|Schema|
 |---|---|---|
 |**200**|Returns a list of all enrichment strategies known to Nakadi|< string > array|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
+|**401**|Client is not authenticated|[Problem](definitions.md#problem)|
 
 
 #### Tags
@@ -534,7 +483,8 @@ Nakadi currently offers these inbuilt strategies:
 
 - `hash`: Resolution of the partition follows the computation of a hash from the value of
   the fields indicated in the EventType's `partition_key_fields`, guaranteeing that Events
-  with same values on those fields end in the same partition.
+  with same values on those fields end in the same partition. Given the event type's category
+  is DataChangeEvent, field path is considered relative to "data".
 
 
 #### Responses
@@ -542,29 +492,7 @@ Nakadi currently offers these inbuilt strategies:
 |HTTP Code|Description|Schema|
 |---|---|---|
 |**200**|Returns a list of all partitioning strategies known to Nakadi|< string > array|
-|**500**|Server error|[Problem](definitions.md#problem)|
-
-
-#### Tags
-
-* schema-registry-api
-
-
-<a name="registry-validation-strategies-get"></a>
-### GET /registry/validation-strategies
-
-#### Description
-Lists all of the validation strategies supported by this installation of Nakadi. Special or
-custom strategies besides the defaults will be listed here.
-
-
-#### Responses
-
-|HTTP Code|Description|Schema|
-|---|---|---|
-|**200**|Returns a list of all validation strategies known to Nakadi|< string > array|
-|**500**|Server error|[Problem](definitions.md#problem)|
-|**503**|Service (temporarily) unavailable|[Problem](definitions.md#problem)|
+|**401**|Client is not authenticated|[Problem](definitions.md#problem)|
 
 
 #### Tags
