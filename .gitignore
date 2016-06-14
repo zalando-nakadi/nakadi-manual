@@ -17,3 +17,5 @@ _book
 
 .DS_Store
 scratch.md
+
+npm-debug.log
