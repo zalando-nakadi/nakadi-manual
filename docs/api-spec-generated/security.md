@@ -13,7 +13,7 @@ scopes in the future such as limiting access to particular event types and strea
 ### oauth2
 *Type* : oauth2  
 *Flow* : implicit  
-*Token URL* : https://auth.example.com/oauth2/tokeninfo
+*Token URL* : https://info.services.auth.zalando.com/oauth2/tokeninfo
 
 
 |Name|Description|
