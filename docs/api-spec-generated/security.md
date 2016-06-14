@@ -16,7 +16,7 @@ scopes in the future such as limiting access to particular event types and strea
 *Token URL* : https://auth.example.com/oauth2/tokeninfo
 
 
-|Name|Description|
+|Scope|Description|
 |---|---|
 |nakadi.config.write|Grants access for changing Nakadi configuration.|
 |nakadi.event_type.write|Grants access for applications to define and update EventTypes.|
