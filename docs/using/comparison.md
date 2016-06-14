@@ -5,6 +5,7 @@ In this section, we'll look at how Nakadi fits in with the stream broker/process
   - [Apache Kafka](#kafka)
   - [Google Pub/Sub](#pubsub)
   - [AWS Kinesis](#kinesis)
+  - [AWS Simple Queue Service (SQS)](#sqs)
   - [Azure EventHub](#eventhub)
   - [Confluent Platform](#confluent)
 
@@ -54,6 +55,20 @@ Like Nakadi and Pub/Sub, AWS Kinesis has a HTTP API to hide its details. Kinesis
 - AWS restrict the number of streams available to an account to quite a low starting number, and messages can be stored for a maximum of 7 days whereas Nakadi can support a large number of event types and the expiration for events is configurable.
 
 - Kinesis supports resizing the number of shards in a stream wheres partition counts in Nakadi are fixed once set for an event type.
+
+
+<a name="sqs"></a>
+### AWS Simple Queue Service (SQS)
+
+The basic abstraction in SQS is a queue, which is quite different from a Nakadi / Kafka stream.
+
+- SQS does not guarantee the message order in a queue, although it "makes a best effort to preserve it". SQS provides at-least-once delivery of messages, so applications should be designed to be idempotent.
+
+- SQS queues are durable and highly available. A queue can hold an unlimited number of messages, with a maximum message retention of 2 weeks. Each message carries an opaque text payload (max. 256KB). In addition to that, messages can have up to 10 message attributes, which can be read without inspecting the payload.
+
+- Each message in an SQS queue can only be consumed once. In the case of multiple consumers, each one would typically use a dedicated SQS queue, which are all hooked up to a shared Amazon SNS topic that provides the fanout. When a new consumer is later added to this setup, its queue will initially be empty. An SQS queue does not have any history, and cannot be "replayed" again like a Kafka stream.
+
+- SQS has "work queue" semantics. This means that delivered messages have to be removed from the queue explicitly by a separate call. If this call is not received within a configured timeframe, the message is delivered again ("automatic retry"). After a configurable number of unsuccessful deliveries, the message is moved to a dead letter queue.
 
 
 <a name="eventhub"></a>
