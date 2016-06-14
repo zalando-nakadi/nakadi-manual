@@ -27,24 +27,19 @@
 #### Description
 Creates a new `EventType`.
 
-**Implementation note:** The creation of an EventType implicitly creates the structures in
-the backing messaging implementation needed for the reception and persistence of the
-Events. Considering that at this time only Kafka is used, this corresponds to the creation
-of a Topic. If so desired, clients can interact directly with the topic using the low level
-API (for existing restrictions see the corresponding methods on the topic-api).
-
 The fields validation-strategies, enrichment-strategies and partition-resolution-strategy
 have all an effect on the incoming Event of this EventType. For its impacts on the reception
 of events please consult the Event submission API methods.
 
 * Validation strategies define an array of validation stategies to be evaluated on reception
-of an `Event` of this `EventType`. Details of usage can be found in an external document
-(TBD link to document).
+of an `Event` of this `EventType`. Details of usage can be found in this external document
 
-* TBD Enrichment strategy
+  - http://zalando.github.io/nakadi-manual/
+
+* Enrichment strategy. (todo: define this part of the API).
 
 * The schema of an `EventType` is defined as an `EventTypeSchema`. Currently only
-json-schema is supported.
+the value `json-schema` is supported, representing JSON Schema draft 04.
 
 Following conditions are enforced. Not meeting them will fail the request with the indicated
 status (details are provided in the Problem object):
@@ -166,7 +161,7 @@ Updates the `EventType` identified by its name. Behaviour is the same as creatio
 The name field cannot be changed. Attempting to do so will result in a 422 failure.
 
 At this moment changes in the schema are not supported and will produce a 422
-failure. (TODO: define conditions for backwards compatible extensions in the schema)
+failure. (todo: define conditions for backwards compatible extensions in the schema)
 
 
 #### Parameters
@@ -206,11 +201,14 @@ failure. (TODO: define conditions for backwards compatible extensions in the sch
 ### DELETE /event-types/{name}
 
 #### Description
-Deletes an `EventType` identified by its name. The underlying Kafka topic and all events of
-this `EventType` will also be removed.  **Note**: Kafka's topic deletion happens
-asynchronously with respect to this DELETE call; therefore creation of an equally named
-`EventType` before the underlying topic deletion is complete will not succeed (failure is a
-409 Conflic).
+Deletes an `EventType` identified by its name. All events in the `EventType`'s stream' will
+also be removed. **Note**: deletion happens asynchronously, which has the following
+consequences:
+
+ * Creation of an equally named `EventType` before the underlying topic deletion is complete
+ might not succeed (failure is a 409 Conflict).
+
+ * Events in the stream may be visible for a short period of time before being removed.
 
 
 #### Parameters
@@ -325,8 +323,10 @@ The event stream is formatted as a sequence of `EventStreamBatch`es separated by
 `EventStreamBatch` contains a chunk of Events and a `Cursor` pointing to the **end** of the
 chunk (i.e. last delivered Event). The cursor might specify the offset with the symbolic
 value `BEGIN`, which will open the stream starting from the oldest available offset in the
-partition.  Currently this format is the only one supported by the system, but in the future
-other MIME types will be supported (like `application/event-stream`).
+partition.
+
+Currently the `application/x-json-stream` format is the only one supported by the system,
+but in the future other media types may be supported.
 
 If streaming for several distinct partitions, each one is an independent `EventStreamBatch`.
 
@@ -496,10 +496,8 @@ GET /metrics
 ### GET /registry/enrichment-strategies
 
 #### Description
-Lists all of the enrichment strategies supported by this installation of Nakadi.
-
-If the EventType creation is to have special enrichments (besides the default), one can
-consult over this method the available possibilities.
+Lists all of the enrichment strategies supported by this Nakadi installation. Special or
+custom strategies besides the defaults will be listed here.
 
 
 #### Responses
@@ -520,12 +518,10 @@ consult over this method the available possibilities.
 ### GET /registry/partition-strategies
 
 #### Description
-Lists all of the partition resolution strategies supported by this installation of Nakadi.
+Lists all of the partition resolution strategies supported by this installation of Nakadi. 
+Special or custom strategies besides the defaults will be listed here.
 
-If the EventType creation is to have a specific partition strategy (other than the default),
-one can consult over this method the available possibilities.
-
-Nakadi offers currently, out of the box, the following strategies:
+Nakadi currently offers these inbuilt strategies:
 
 - `random`: Resolution of the target partition happens randomly (events are evenly
   distributed on the topic's partitions).
@@ -558,10 +554,8 @@ Nakadi offers currently, out of the box, the following strategies:
 ### GET /registry/validation-strategies
 
 #### Description
-Lists all of the validation strategies supported by this installation of Nakadi.
-
-If the EventType creation is to have special validations (besides the default), one can
-consult over this method the available possibilities.
+Lists all of the validation strategies supported by this installation of Nakadi. Special or
+custom strategies besides the defaults will be listed here.
 
 
 #### Responses
