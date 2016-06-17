@@ -71,6 +71,8 @@ The basic abstraction in SQS is a queue, which is quite different from a Nakadi 
 
 - SQS has "work queue" semantics. This means that delivered messages have to be removed from the queue explicitly by a separate call. If this call is not received within a configured timeframe, the message is delivered again ("automatic retry"). After a configurable number of unsuccessful deliveries, the message is moved to a dead letter queue.
 
+- In contrast to moving a single cursor in the datastream (like in Nakadi, Kinesis or Kafka), SQS semantics of confirming individual messages, has advantages if a single message is unprocessable (i.e. format is not parseable). In SQS only the problamatic message is delayed. In a cursor semantic the client has to decide: Either stop all further message processing until the problem is fixed or skip the message and move the cursor.
+
 <a name="hermes"></a>
 ### Allegro Hermes
 
