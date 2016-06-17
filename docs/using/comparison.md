@@ -6,6 +6,7 @@ In this section, we'll look at how Nakadi fits in with the stream broker/process
   - [Google Pub/Sub](#pubsub)
   - [AWS Kinesis](#kinesis)
   - [AWS Simple Queue Service (SQS)](#sqs)
+  - [Allegro Hermes](#hermes)
   - [Azure EventHub](#eventhub)
   - [Confluent Platform](#confluent)
 
