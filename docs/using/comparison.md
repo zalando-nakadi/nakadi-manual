@@ -70,6 +70,20 @@ The basic abstraction in SQS is a queue, which is quite different from a Nakadi 
 
 - SQS has "work queue" semantics. This means that delivered messages have to be removed from the queue explicitly by a separate call. If this call is not received within a configured timeframe, the message is delivered again ("automatic retry"). After a configurable number of unsuccessful deliveries, the message is moved to a dead letter queue.
 
+<a name="hermes"></a>
+### Allegro Hermes
+
+[Hermes](https://github.com/allegro/hermes) like Nakadi, is an API based broker build on Apache Kafka. There are some differences worth noting:
+
+- Hermes uses webhooks to deliver messages to consumers. Consumers register a subscription with a callback url and a subscription policy that defines behaviors such as retries and delivery rates. Nakadi maintains a streaming connection to consumers, and will push events as they arrive. Whether messages are delivered in order to consumers does not appear to be a defined behaviour in the API. Similar to Kafka, Nakadi will deliver messages to consumers in arrival order for each partition. Hermes does not appear to support partitioning in its API. Hermes has good support for tracking delivered and undelivered messages to susbcribers.
+
+- Hermes supports JSON Schema and Avro validation in its schema registry. Nakadi's registry currently only supports JSON Schema, but may support Avro in the future. Hermes does not provide inbuilt event types, whereas Nakadi defines optional types to support data change and business process events, with some uniform fields producers and consumers can coordinate on. 
+
+- Hermes allows topics (event types in Nakadi) to be collated into groups that are adminstrated by a single publisher. Consumers access data at a per topic level, the same as Nakadi currently; Nakadi may support multi-topic subscriptions in the future via a subscription API. 
+
+- The Hermes project supports a Java client driver for publishing messages. Nakadi does not ship with a client.
+
+- Hermes claims resilience when it comes to issues with its internal Kafka broker, such that it will continue to accept messages when Kafka is down. It does this by buffering messages in memory with an optional means to spill to local disk; this will help with crashing brokers or hermes nodes, but not with loss of an instance (eg an ec2 instance). Nakadi does not accept messages if its Kafka brokers are down or unavailable. 
 
 <a name="eventhub"></a>
 ### Azure Event Hub
