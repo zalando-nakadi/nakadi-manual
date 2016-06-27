@@ -1,5 +1,6 @@
 # Table of Contents 
 * [Getting Started](docs/getting-started.md)
+* [FAQ](docs/faq.md)
 * [Using Nakadi](docs/using.md)
   - [Concepts](docs/using/concepts.md)
   - [Event Types](docs/using/event-types.md)
@@ -14,4 +15,4 @@
 * [Building and Developing](docs/developing.md)
 * [(todo) Operations](docs/operating.md)
 * [(todo) Recipes and Patterns](docs/recipes.md)
-* [FAQ](docs/faq.md)
+
