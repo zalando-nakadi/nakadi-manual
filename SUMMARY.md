@@ -14,4 +14,4 @@
 * [Building and Developing](docs/developing.md)
 * [(todo) Operations](docs/operating.md)
 * [(todo) Recipes and Patterns](docs/recipes.md)
-* [(partial) FAQ](docs/faq.md)
+* [FAQ](docs/faq.md)
