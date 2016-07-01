@@ -15,4 +15,5 @@
 * [Building and Developing](docs/developing.md)
 * [(todo) Operations](docs/operating.md)
 * [(todo) Recipes and Patterns](docs/recipes.md)
-
+  - [OverPartitioning](docs/recipes/OverPartitioning.md)
+  - [OrderedProducer](docs/recipes/OrderedProducer.md)
