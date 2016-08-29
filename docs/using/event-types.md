@@ -73,7 +73,7 @@ A successful request will result in a `201 Created` response.
 Once an event type is created, it is added to the _event type registry_ and its details are visible from its URI in the registry. Events can then be posted to its stream and consumed by multiple clients. 
 
 The exact required fields depend on the event type's category, but `name`, `owning_application` and `schema` are always expected. The 
-["API Reference"](./api-reference.html) contains more details on event types.
+["API Reference"](../api-spec-generated/overview.html) contains more details on event types.
 
 ### Partitions
 

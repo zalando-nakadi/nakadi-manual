@@ -8,7 +8,7 @@ A consumer can open the stream for an Event Type via the `/events` sub-resource.
 curl -v http://localhost:8080/event-types/order_received/events 
 ```
 
-The stream accepts various parameters from the consumer, which you can read about in the ["API Reference"](./api-reference.html). In this section we'll just describe the response format, along with how cursors and keepalives work.
+The stream accepts various parameters from the consumer, which you can read about in the ["API Reference"](../api-spec-generated/overview.html). In this section we'll just describe the response format, along with how cursors and keepalives work.
 
 ### HTTP Event Stream
 
