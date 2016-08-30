@@ -49,7 +49,7 @@ curl -v -XPOST http://localhost:8080/event-types -d '{
 }'
 ```
 
-Once publisher tries to write event to `order_received` event type he is examined for scopes
+Once publisher tries to write an event to `order_received`, its OAuth2 Token is examined for scopes
 which are defined in `write_scopes`. For successful publishing he should have at least one of
 the defined scopes.
 
