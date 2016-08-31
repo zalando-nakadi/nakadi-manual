@@ -28,7 +28,7 @@ scopes in the future such as limiting access to particular event types and strea
 #### Write and read scopes
 
 Nakadi has possibility to check OAuth2 Scopes (scopes) of publisher and consumer to grant access
-write and read events only for trusted users.
+write and read events only for trusted applications.
 In order to use this feature an event type owner is able to specify read and write
 scopes for the event type:
 
@@ -54,7 +54,7 @@ which are defined in `write_scopes`. For successful publishing he should have at
 the defined scopes.
 
 The event type owner has to create scopes for the application which is owner of this event type.
-Publishers, in their turn, has to request scopes for their applications, which are defined by
+Publishers, in their turn, have to request scopes for their applications, which are defined by
 the event type owner, to be able to publish events.
 
 Application scope validation does not occur if no write or read scopes are specified
