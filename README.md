@@ -9,7 +9,7 @@ The goal of Nakadi is to enable convenient development of event-driven applicati
 
 Operations is also a factor behind Nakadi's design. Managing upgrades to systems like Kafka becomes easier when technology sits behind an API and isn't a shared dependency between microservices. Asychronous event delivery can be a simpler overall option for a microservice architecture compared to synchronized and deep call paths that have to be mitigated with caches, bulkheads and circuit breakers. 
 
-The section ["Comparison to Other Systems"](./docs/using/comparison.html) describes Nakadi relative to systems such as Apache Kafka, AWS Kinesis, Google Pub/Sub and Azure EventHub.
+The section ["Comparison to Other Systems"](https://github.com/zalando/nakadi-manual/blob/master/docs/using/comparison.md) describes Nakadi relative to systems such as Apache Kafka, AWS Kinesis, Google Pub/Sub and Azure EventHub.
 
 ### Features
 
