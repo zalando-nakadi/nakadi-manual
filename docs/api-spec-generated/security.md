@@ -1,8 +1,8 @@
 
 ## Authorization
 
-The Nakadi API can be secured using OAuth 2.0 scopes. The current model is 
-limited to generic scopes. The project may look to support more granular 
+The Nakadi API can be secured using OAuth 2.0 scopes. The current model is
+limited to generic scopes. The project may look to support more granular
 scopes in the future such as limiting access to particular event types and streams.
 
 
@@ -33,7 +33,7 @@ In order to use this feature an event type owner is able to specify read and wri
 scopes for the event type:
 
 ```sh
-curl -v -XPOST http://localhost:8080/event-types -d '{
+curl -v -XPOST -H "Content-Type: application/json" http://localhost:8080/event-types -d '{
   "name": "order_received",
   "owning_application": "acme-order-service",
   "category": "business",
