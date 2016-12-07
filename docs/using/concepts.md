@@ -4,7 +4,7 @@ The Nakadi API allows the publishing and consuming of _events_ over HTTP.
 
 A good way to think of events is that they are like messages in a stream processing or queuing system, but have a defined structure that can be understood and validated. The object containing the information describing an event is called an _event type_.
 
-To publish and consume events, an _owning application_ must first register a new event type with Nakadi. The event type contains information such as its name, the aforementioed owning application, strategies for partitioning and enriching data, and a [JSON Schema](http://json-schema.org/). Nakadi supports an _event type registry_ API that lists all the available event types.
+To publish and consume events, an _owning application_ must first register a new event type with Nakadi. The event type contains information such as its name, the aforementioned owning application, strategies for partitioning and enriching data, and a [JSON Schema](http://json-schema.org/). Nakadi supports an _event type registry_ API that lists all the available event types.
 
 Once the event type is created, a resource called a _stream_ becomes available for that event type. The stream will accept events for the type from a _producer_ and can be read from by one or more _consumers_. Nakadi can validate each event that is sent to the stream.
 
