@@ -63,8 +63,6 @@ Like Nakadi and Pub/Sub, AWS Kinesis has a HTTP API to hide its details. Kinesis
 
 The basic abstraction in SQS is a queue, which is quite different from a Nakadi / Kafka stream.
 
-- SQS does not guarantee the message order in a queue, although it "makes a best effort to preserve it". SQS provides at-least-once delivery of messages, so applications should be designed to be idempotent.
-
 - SQS queues are durable and highly available. A queue can hold an unlimited number of messages, with a maximum message retention of 2 weeks. Each message carries an opaque text payload (max. 256KB). In addition to that, messages can have up to 10 message attributes, which can be read without inspecting the payload.
 
 - Each message in an SQS queue can only be consumed once. In the case of multiple consumers, each one would typically use a dedicated SQS queue, which are all hooked up to a shared Amazon SNS topic that provides the fanout. When a new consumer is later added to this setup, its queue will initially be empty. An SQS queue does not have any history, and cannot be "replayed" again like a Kafka stream.
