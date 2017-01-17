@@ -74,7 +74,7 @@ The event type has a simple JSON Schema submitted as an escaped JSON string desc
 says events will be randomly allocated to partitions, and the owner's name is
 `"acme-order-service"`. The `enrichment_strategies` array says to apply `metadata_enrichment` to submitted events (common metadata is a feature of some categories).
 
-The event type has an optional `default_statistics` object, which controls the number of partitions. Nakadi will use a sensible default if no value is provided. The values provided here 
+The event type has an optional `default_statistic` object, which controls the number of partitions. Nakadi will use a sensible default if no value is provided. The values provided here 
 cannot be changed later, so choose them wisely. 
 
 A successful request will result in a `201 Created` response.
