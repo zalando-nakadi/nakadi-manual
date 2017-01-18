@@ -139,8 +139,8 @@ curl -v -XPOST -H "Content-Type: application/json" http://localhost:8080/event-t
   "default_statistic": {
     "messages_per_minute": 1000,	
     "message_size":	5,
-    "read_parallelism":	10,
-    "write_parallelism": 5
+    "read_parallelism":	1,
+    "write_parallelism": 1
   },
   "schema": {
     "type": "json_schema",
