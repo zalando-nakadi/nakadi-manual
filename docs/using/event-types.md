@@ -136,6 +136,12 @@ curl -v -XPOST -H "Content-Type: application/json" http://localhost:8080/event-t
   "category": "business",
   "partition_strategy": "random",
   "enrichment_strategies": ["metadata_enrichment"],
+  "default_statistic": {
+    "messages_per_minute": 1000,	
+    "message_size":	5,
+    "read_parallelism":	1,
+    "write_parallelism": 1
+  },
   "schema": {
     "type": "json_schema",
     "schema": "{ \"properties\": { \"order_number\": { \"type\": \"string\" } } }"
@@ -146,6 +152,9 @@ curl -v -XPOST -H "Content-Type: application/json" http://localhost:8080/event-t
 The event type has a simple JSON Schema submitted as an escaped JSON string describing the `order number` and thus only declare the custom part of the schema. The `partition_strategy`
 says events will be randomly allocated to partitions, and the owner's name is
 `"acme-order-service"`. The `enrichment_strategies` array says to apply `metadata_enrichment` to submitted events (common metadata is a feature of some categories).
+
+The event type has an optional `default_statistic` object, which controls the number of partitions. Nakadi will use a sensible default if no value is provided. The values provided here 
+cannot be changed later, so choose them wisely. 
 
 A successful request will result in a `201 Created` response.
 
