@@ -5,7 +5,7 @@
   - [Concepts](docs/using/concepts.md)
   - [Event Types](docs/using/event-types.md)
   - [Producing Events](docs/using/producing-events.md)
-  - [Consuming Events](docs/using/consuming-events.md)
+  - [Consuming Events](docs/using/consuming-events-lola.md)
   - [Client Libraries](docs/using/clients.md)
   - [(partial) Compared to Other Systems](docs/using/comparison.md)
 * [API Reference](docs/api-spec-generated/overview.md)
