@@ -5,6 +5,7 @@ In this section we'll walk through using Nakadi to produce and consume events, a
   - [Concepts](./using/concepts.html)
   - [Event Types](./using/event-types.html)
   - [Producing Events](./using/producing-events.html)
-  - [Consuming Events](./using/consuming-events.html)
+  - [Consuming Events with the Low-level API](./using/consuming-events-lola.html)
+  - [Consuming Events with the High-level API (Subscriptions)](./using/consuming-events-hila.html)
 
 The section, ["API Reference"](./api-spec-generated/overview.html) contains a detailed description of the API.

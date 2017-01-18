@@ -1,4 +1,4 @@
-## Consuming Events
+## Consuming Events with the Low-level API
 
 ### Connecting to a Stream
 
