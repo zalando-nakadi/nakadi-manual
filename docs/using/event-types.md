@@ -214,4 +214,4 @@ The assignment of events to a partition is controllable by the producer. The
 
 - `user_defined`: the partition is set by the producer when sending an event. This option is only available for the 'business' and data' categories.
 
-Which option to use depends on your requirements. When order matters, hash is usually the right choice. For very high volume streams where order doesn't matter, random can be a good choice as it load balances data well. The user defined option is a power tool, unless you know you need it, use hash or random.
+Which option to use depends on your requirements. When order matters, hash is usually the right choice. For very high volume streams where order doesn't matter, random can be a good choice as it load balances data well. The user defined option is a power tool, unless you know you need it, use hash or random. Hash is the preferred strategy, as it ensures that duplicated events will end up in the same partition.
