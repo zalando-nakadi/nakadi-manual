@@ -159,7 +159,8 @@ curl -v -XPOST -H "Content-Type: application/json" http://localhost:8080/event-t
   "name": "order_received",
   "owning_application": "acme-order-service",
   "category": "business",
-  "partition_strategy": "random",
+  "partition_strategy": "hash",
+  "partition_key_fields": ["order_number"],
   "enrichment_strategies": ["metadata_enrichment"],
   "default_statistic": {
     "messages_per_minute": 1000,	
@@ -175,7 +176,7 @@ curl -v -XPOST -H "Content-Type: application/json" http://localhost:8080/event-t
 ```
 
 The event type has a simple JSON Schema submitted as an escaped JSON string describing the `order number` and thus only declare the custom part of the schema. The `partition_strategy`
-says events will be randomly allocated to partitions, and the owner's name is
+says events will be allocated to partitions according to the hash of the `order_number` field, defined in `partition_key_fields`, and the owner's name is
 `"acme-order-service"`. The `enrichment_strategies` array says to apply `metadata_enrichment` to submitted events (common metadata is a feature of some categories).
 
 The event type has an optional `default_statistic` object, which controls the number of partitions. Nakadi will use a sensible default if no value is provided. The values provided here 
@@ -213,4 +214,4 @@ The assignment of events to a partition is controllable by the producer. The
 
 - `user_defined`: the partition is set by the producer when sending an event. This option is only available for the 'business' and data' categories.
 
-Which option to use depends on your requirements. When order matters, hash is usually the right choice. For very high volume streams where order doesn't matter, random can be a good choice as it load balances data well. The user defined option is a power tool, unless you know you need it, use hash or random.
+Which option to use depends on your requirements. When order matters, hash is usually the right choice. For very high volume streams where order doesn't matter, random can be a good choice as it load balances data well. The user defined option is a power tool, unless you know you need it, use hash or random. Hash is the preferred strategy, as it ensures that duplicated events will end up in the same partition.
