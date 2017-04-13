@@ -302,9 +302,10 @@ Starts a stream delivery for the specified partitions of the given EventType.
 
 The event stream is formatted as a sequence of `EventStreamBatch`es separated by `\n`. Each
 `EventStreamBatch` contains a chunk of Events and a `Cursor` pointing to the **end** of the
-chunk (i.e. last delivered Event). The cursor might specify the offset with the symbolic
-value `BEGIN`, which will open the stream starting from the oldest available offset in the
-partition.
+chunk (i.e. last delivered Event). The default cursor position is at the front of the 
+stream, with new events that arrive being sent to the client. The cursor's position in the 
+stream can be specified by sending the value `BEGIN`, which opens the stream starting from 
+the oldest available offset in the partition. 
 
 Currently the `application/x-json-stream` format is the only one supported by the system,
 but in the future other media types may be supported.
