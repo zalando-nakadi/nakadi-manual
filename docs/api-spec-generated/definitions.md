@@ -30,7 +30,7 @@ A status corresponding to one individual Event's publishing attempt.
 |**detail**  <br>*optional*|Human readable information about the failure on this item. Items that are not "submitted"<br>should have a description.|string|
 |**eid**  <br>*optional*|eid of the corresponding item. Will be absent if missing on the incoming Event.|string(uuid)|
 |**publishing_status**  <br>*required*|Indicator of the submission of the Event within a Batch.<br><br>- "submitted" indicates successful submission, including commit on he underlying broker.<br><br>- "failed" indicates the message submission was not possible and can be resubmitted if so<br>  desired.<br><br>- "aborted" indicates that the submission of this item was not attempted any further due<br>  to a failure on another item in the batch.|enum (submitted, failed, aborted)|
-|**step**  <br>*optional*|Indicator of the step in the publishing process this Event reached.<br><br>In Items that "failed" means the step of the failure.<br><br>- "none" indicates that nothing was yet attempted for the publishing of this Event. Should<br>  be present only in the case of aborting the publishing during the validation of another<br>  (previous) Event.<br><br>- "validating", "enriching", "partitioning" and "publishing" indicate all the<br>  corresponding steps of the publishing process.|enum (none, validating, enriching, partitioning, publishing)|
+|**step**  <br>*optional*|Indicator of the step in the publishing process this Event reached.<br><br>In Items that "failed" means the step of the failure.<br><br>- "none" indicates that nothing was yet attempted for the publishing of this Event. Should<br>  be present only in the case of aborting the publishing during the validation of another<br>  (previous) Event.<br><br>- "validating", "partitioning", "enriching" and "publishing" indicate all the<br>  corresponding steps of the publishing process.|enum (none, validating, partitioning, enriching, publishing)|
 
 
 <a name="businessevent"></a>
@@ -54,6 +54,17 @@ Usually represents a status transition in a Business process.
 |---|---|---|
 |**offset**  <br>*required*|Offset of the event being pointed to.|string|
 |**partition**  <br>*required*|Id of the partition pointed to by this cursor.|string|
+
+
+<a name="cursorcommitresult"></a>
+### CursorCommitResult
+The result of single cursor commit. Holds a cursor itself and a result value.
+
+
+|Name|Description|Schema|
+|---|---|---|
+|**cursor**  <br>*required*||[SubscriptionCursor](definitions.md#subscriptioncursor)|
+|**result**  <br>*required*|The result of cursor commit.<br>- `committed`: cursor was successfully committed<br>- `outdated`: there already was more recent (or the same) cursor committed, so the current one was not<br>  committed as it is outdated|string|
 
 
 <a name="datachangeevent"></a>
@@ -127,6 +138,7 @@ Sequential batches might present repeated cursors if no new events have arrived.
 |---|---|---|
 |**cursor**  <br>*required*||[Cursor](definitions.md#cursor)|
 |**events**  <br>*optional*||< [Event](definitions.md#event) > array|
+|**info**  <br>*optional*||[StreamInfo](definitions.md#streaminfo)|
 
 
 <a name="eventtype"></a>
@@ -137,13 +149,24 @@ An event type defines the schema and its runtime properties.
 |Name|Description|Schema|
 |---|---|---|
 |**category**  <br>*required*|Defines the category of this EventType.<br><br>The value set will influence, if not set otherwise, the default set of<br>validations, enrichment-strategies, and the effective schema for validation in<br>the following way:<br><br>- `undefined`: No predefined changes apply. The effective schema for the validation is<br>  exactly the same as the `EventTypeSchema`.<br><br>- `data`: Events of this category will be DataChangeEvents. The effective schema during<br>  the validation contains `metadata`, and adds fields `data_op` and `data_type`. The<br>  passed EventTypeSchema defines the schema of `data`.<br><br>- `business`: Events of this category will be BusinessEvents. The effective schema for<br>  validation contains `metadata` and any additionally defined properties passed in the<br>  `EventTypeSchema` directly on top level of the Event. If name conflicts arise, creation<br>  of this EventType will be rejected.|enum (undefined, data, business)|
-|**default_statistics**  <br>*optional*|Statistics of this EventType used for optimization purposes. Internal use of these values<br>might change over time.<br>(TBD: measured statistics)|[EventTypeStatistics](definitions.md#eventtypestatistics)|
+|**default_statistics**  <br>*optional*|Defines expected load for this EventType. Nakadi uses this object in order to<br>provide an optimal number of partitions from a throughput perspective.|[EventTypeStatistics](definitions.md#eventtypestatistics)|
 |**enrichment_strategies**  <br>*optional*|Determines the enrichment to be performed on an Event upon reception. Enrichment is<br>performed once upon reception (and after validation) of an Event and is only possible on<br>fields that are not defined on the incoming Event.<br><br>For event types in categories 'business' or 'data' it's mandatory to use<br>metadata_enrichment strategy. For 'undefined' event types it's not possible to use this<br>strategy, since metadata field is not required.<br><br>See documentation for the write operation for details on behaviour in case of unsuccessful<br>enrichment.|< enum (metadata_enrichment) > array|
 |**name**  <br>*required*|Name of this EventType. The name is constrained by a regular expression.<br><br>Note: the name can encode the owner/responsible for this EventType and ideally should<br>follow a common pattern that makes it easy to read an understand, but this level of<br>structure is not enforced. For example a team name and data type can be used such as<br>'acme-team.price-change'.  <br>**Example** : `"order.order_cancelled, acme-platform.users"`|string|
+|**options**  <br>*optional*|Provides ability to set internal Nakadi parameters.|[EventTypeOptions](definitions.md#eventtypeoptions)|
 |**owning_application**  <br>*required*|Indicator of the (Stups) Application owning this `EventType`.  <br>**Example** : `"price-service"`|string|
 |**partition_key_fields**  <br>*optional*|Required when 'partition_resolution_strategy' is set to 'hash'. Must be absent otherwise.<br>Indicates the fields used for evaluation the partition of Events of this type.<br><br>If set it MUST be a valid required field as defined in the schema.|< string > array|
 |**partition_strategy**  <br>*optional*|Determines how the assignment of the event to a partition should be handled.<br><br>For details of possible values, see GET /registry/partition-strategies.  <br>**Default** : `"random"`|string|
 |**schema**  <br>*required*|The schema for this EventType. Submitted events will be validated against it.|[EventTypeSchema](definitions.md#eventtypeschema)|
+
+
+<a name="eventtypeoptions"></a>
+### EventTypeOptions
+Additional parameters for tuning internal behavior of Nakadi.
+
+
+|Name|Description|Schema|
+|---|---|---|
+|**retention_time**  <br>*optional*|Number of milliseconds that Nakadi stores events published to this event type.  <br>**Default** : `345600000`|integer(int64)|
 
 
 <a name="eventtypeschema"></a>
@@ -157,8 +180,8 @@ An event type defines the schema and its runtime properties.
 
 <a name="eventtypestatistics"></a>
 ### EventTypeStatistics
-Operational statistics for an EventType. This data is generated by Nakadi based on the runtime
-and might be used to guide changes in internal parameters.
+Operational statistics for an EventType. This data MUST be provided by users on Event Type
+creation.
 
 
 |Name|Description|Schema|
@@ -167,6 +190,34 @@ and might be used to guide changes in internal parameters.
 |**messages_per_minute**  <br>*required*|Write rate for events of this EventType. This rate encompasses all producers of this<br>EventType for a Nakadi cluster.<br><br>Measured in event count per minute.|integer|
 |**read_parallelism**  <br>*required*|Amount of parallel readers (consumers) to this EventType.|integer|
 |**write_parallelism**  <br>*required*|Amount of parallel writers (producers) to this EventType.|integer|
+
+
+<a name="metrics"></a>
+### Metrics
+Object containing application metrics.
+
+*Type* : object
+
+
+<a name="paginationlink"></a>
+### PaginationLink
+URI identifying another page of items
+
+
+|Name|Description|Schema|
+|---|---|---|
+|**href**  <br>*optional*|**Example** : `"/subscriptions?offset=20&limit=10"`|string|
+
+
+<a name="paginationlinks"></a>
+### PaginationLinks
+contains links to previous and next pages of items
+
+
+|Name|Description|Schema|
+|---|---|---|
+|**next**  <br>*optional*||[PaginationLink](definitions.md#paginationlink)|
+|**prev**  <br>*optional*||[PaginationLink](definitions.md#paginationlink)|
 
 
 <a name="partition"></a>
@@ -193,6 +244,80 @@ This information is not related to the state of the consumer clients.
 |**status**  <br>*required*|The HTTP status code generated by the origin server for this occurrence of the problem.  <br>**Example** : `503`|integer(int32)|
 |**title**  <br>*required*|A short, summary of the problem type. Written in English and readable for engineers<br>(usually not suited for non technical stakeholders and not localized)  <br>**Example** : `"Service Unavailable"`|string|
 |**type**  <br>*required*|An absolute URI that identifies the problem type.  When dereferenced, it SHOULD provide<br>human-readable API documentation for the problem type (e.g., using HTML).  This Problem<br>object is the same as provided by https://github.com/zalando/problem  <br>**Example** : `"http://httpstatus.es/503"`|string|
+
+
+<a name="streaminfo"></a>
+### StreamInfo
+This object contains general information about the stream. Used only for debugging
+purposes. We recommend logging this object in order to solve connection issues. Clients
+should not parse this structure.
+
+*Type* : object
+
+
+<a name="subscription"></a>
+### Subscription
+Subscription is a high level consumption unit. Subscriptions allow applications to easily scale the
+number of clients by managing consumed event offsets and distributing load between instances.
+The key properties that identify subscription are 'owning_application', 'event_types' and 'consumer_group'.
+It's not possible to have two different subscriptions with these properties being the same.
+
+
+|Name|Description|Schema|
+|---|---|---|
+|**consumer_group**  <br>*optional*|The value describing the use case of this subscription.<br>In general that is an additional identifier used to differ subscriptions having the same<br>owning_application and event_types.  <br>**Default** : `"default"`  <br>**Example** : `"read-product-updates"`|string|
+|**created_at**  <br>*optional*  <br>*read-only*|Timestamp of creation of the subscription. This is generated by Nakadi. It should not be<br>specified when creating subscription and sending it may result in a client error.  <br>**Example** : `"1996-12-19T16:39:57-08:00"`|string(date-time)|
+|**event_types**  <br>*required*|EventTypes to subscribe to.<br>The order is not important. Subscriptions that differ only be the order of EventTypes will be<br>considered the same and will have the same id.<br><br>* Currently only subscription to a single EventType is supported. Subscriptions with more than one<br>  EventType in event_types property will be rejected.|< string > array|
+|**id**  <br>*optional*  <br>*read-only*|Id of subscription that was created. Is generated by Nakadi, should not be specified when creating<br>subscription.|string|
+|**owning_application**  <br>*required*|The id of application owning the subscription.  <br>**Example** : `"gizig"`|string|
+|**read_from**  <br>*optional*|Position to start reading events from. Currently supported values:<br>- `begin` - read from the oldest available event.<br>- `end` - read from the most recent offset.<br>Applied in the moment when client starts reading from a subscription.  <br>**Default** : `"end"`|string|
+
+
+<a name="subscriptioncursor"></a>
+### SubscriptionCursor
+*Polymorphism* : Composition
+
+
+|Name|Description|Schema|
+|---|---|---|
+|**cursor_token**  <br>*required*|An opaque value defined by the server.|string|
+|**event_type**  <br>*optional*|The name of the event type this partition's events belong to.|string|
+|**offset**  <br>*required*|Offset of the event being pointed to.|string|
+|**partition**  <br>*required*|Id of the partition pointed to by this cursor.|string|
+
+
+<a name="subscriptioneventstreambatch"></a>
+### SubscriptionEventStreamBatch
+Analogue to EventStreamBatch but used for high level streamming. It includes specific cursors
+for committing in the high level API.
+
+
+|Name|Description|Schema|
+|---|---|---|
+|**cursor**  <br>*required*||[SubscriptionCursor](definitions.md#subscriptioncursor)|
+|**events**  <br>*optional*||< [Event](definitions.md#event) > array|
+|**info**  <br>*optional*||[StreamInfo](definitions.md#streaminfo)|
+
+
+<a name="subscriptioneventtypestats"></a>
+### SubscriptionEventTypeStats
+statistics of one event-type within a context of subscription
+
+
+|Name|Description|Schema|
+|---|---|---|
+|**event_type**  <br>*required*|event-type name|string|
+|**partitions**  <br>*required*|statistics of partitions of this event-type|< [partitions](#subscriptioneventtypestats-partitions) > array|
+
+<a name="subscriptioneventtypestats-partitions"></a>
+**partitions**
+
+|Name|Description|Schema|
+|---|---|---|
+|**client_id**  <br>*optional*|the id of client that consumes data from this partition|string|
+|**partition**  <br>*required*||string|
+|**state**  <br>*required*|The state of this partition in current subscription. Currently following values are possible:<br>- `unassigned`: the partition is currently not assigned to any client;<br>- `reassigning`: the partition is currently reasssigning from one client to another;<br>- `assigned`: the partition is assigned to a client.|string|
+|**unconsumed_events**  <br>*optional*|The amount of events in this partition that are not yet consumed within this subscription. May be not<br>determined at the moment when no events were yet consumed from the partition in this subscription (in<br>that case the property will be absent).|number|
 
 
 

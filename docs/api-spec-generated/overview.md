@@ -55,20 +55,15 @@ streaming API for submission and reception of Events.
 A low level **Unmanaged API** is available, providing full control and responsibility of
 position tracking and partition resolution (and therefore ordering) to the Clients.
 
-In the high level **Subscription API** the consumption of Events proceeds via the establishment
+In the **High Level API** the consumption of Events proceeds via the establishment
 of a named **Subscription** to an EventType. Subscriptions are persistent relationships from an
 Application (which might have several instances) and the stream of one or more EventType's,
 whose consumption tracking is managed by Nakadi, freeing Consumers from any responsibility in
 tracking of the current position on a Stream.
 
-**Note** *Currently the high level API is out of scope in this specification.  It is in the
-short term plan to be included.*
-
 
 Scope and status of the API
 ---------------------------------
-
-The API specification is in **draft** state and is subject to change.
 
 In this document, you'll find:
 
@@ -78,26 +73,14 @@ Enrichment and Partitioning of Events, and their effects on reception of Events.
 * The existing event format (see definition of Event, BusinessEvent and DataChangeEvent)
 (Note: in the future this is planned to be configurable and not an inherent part of this API).
 
-* Unmanaged API: provides low level access to an event stream with information that allows
-  consumers to detect their position for each partition in the stream via a `Cursor`.
+* High Level API.
 
-Notable omissions here are:
-
-* The Managed (or "high level") API: this will be a contract between Nakadi and consumers to
-allow the latter to establish subscriptions and have offset information managed by the Nakadi
-service.
-
-* Enrichment options. Enrichment is currently limited to metadata enrichment for the business
-  and data change types, but the API is designed to allow more options.
-
-* More extensive security scopes (OAuth) for the different operations in the API.
-
-* Explicit control of an event type's creation parameters (the number of partitions, retention
-  times, etc), as well as their modification.
+Other aspects of the Event Bus are at this moment to be defined and otherwise specified, not included
+in this version of this specification.
 
 
 ### Version information
-*Version* : 0.6.0
+*Version* : 0.7.0
 
 
 ### Contact information
