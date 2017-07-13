@@ -8,5 +8,6 @@
   },
   "devDependencies": {
     "gitbook-cli": "^2.2.0"
+
   }
 }
