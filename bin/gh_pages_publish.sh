@@ -36,6 +36,6 @@ git add -A .
 git commit -am "Update GitHub Pages: ${GITREV}"
 
 # -q to stop the token being printed
-git push -q -f https://$GH_PAGES_TOKEN@github.com/zalando/nakadi-manual gh-pages
+git push -q -f https://$GH_PAGES_TOKEN@github.com/zalando-nakadi/nakadi-manual gh-pages
 
 

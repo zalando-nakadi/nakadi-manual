@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/zalando/nakadi-manual.svg?branch=master)](https://travis-ci.org/zalando/nakadi-manual)
+[![Build Status](https://travis-ci.org/zalando-nakadi/nakadi-manual.svg?branch=master)](https://travis-ci.org/zalando-nakadi/nakadi-manual)
 
 ----
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -68,7 +68,7 @@ Travis has an envar called `GH_PAGES_TOKEN` set with a personal access token tha
 
 ```sh
 gem install travis
-travis encrypt -r zalando/nakadi-manual GH_PAGES_TOKEN=${GH_PAGES_TOKEN} --add
+travis encrypt -r zalando-nakadi/nakadi-manual GH_PAGES_TOKEN=${GH_PAGES_TOKEN} --add
 ```
 
 The build step requires both NPM and JDK 8 - to allow Travis to use both and set JDK 8 via its `jdk_switcher` command, the setup uses the `trusty` Ubuntu distribution (otherwise the build will fail as JDK8 is not the default in Travis).

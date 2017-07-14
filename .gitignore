@@ -16,6 +16,8 @@ _book
 *.pdf
 
 .DS_Store
+.idea
+*.iml
 scratch.md
 
 npm-debug.log
