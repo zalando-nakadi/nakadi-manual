@@ -1,17 +1,10 @@
+X-Zalando-Team: aruha
+X-Zalando-Type: code
+ 
 approvals:
-  minimum: 2
-  pattern: "^(👍|:\\+1:|:thumbsup:|:shipit:)$"
-  veto:
-    pattern: "^(👎|:-1:|:thumbsdown:)$"
-  from:
-    users:
-      - adyach
-      - antban
-      - lmontrieux
-      - rcillo
-      - v-stepanov
-      - valgog
-      - SergKam
-      - dehora
-X-Zalando-Team: "aruha"
-X-Zalando-Type: doc
+  groups:
+    zalando:
+      minimum: 2
+      from:
+        orgs:
+          - zalando
