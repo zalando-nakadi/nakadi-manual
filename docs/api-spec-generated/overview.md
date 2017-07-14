@@ -23,9 +23,6 @@ An EventType defines properties relevant for the operation of its associated str
 * The **schema** of the Event of this EventType. The schema defines the accepted format of
 Events of an EventType and will be, if so desired, enforced by Nakadi. Usually Nakadi will
 respect the schema for the EventTypes in accordance to how an owning Application defines them.
-**Note:** *Currently the specification of the schema must be pushed into Nakadi on EventType
-creation; in the future, assuming that Applications will expose the schema for its owned
-resources, Nakadi might support fetching the schema directly from them.*
 
 * The expected **validation** and **enrichment** procedures upon reception of an Event.
 Validation define conditions for the acceptance of the incoming Event and are strictly enforced
@@ -44,6 +41,11 @@ within a Partition have their relative order guaranteed: Events (of a same Event
 *about* a same data entity (that is, have the same value on its Partition key) reach always the
 same Partition, the relative ordering of them is secured. This mechanism implies that no
 statements can be made about the relative ordering of Events that are in different partitions.
+
+* The **authorization** rules for the event type. The rules define who can produce events for
+the event type (write), who can consume events from the event type (read), and who can update
+the event type properties (admin). If the authorization rules are absent, then the event type
+is open to all authenticated users.
 
 Except for defined enrichment rules, Nakadi will never manipulate the content of any Event.
 
@@ -80,7 +82,7 @@ in this version of this specification.
 
 
 ### Version information
-*Version* : 0.7.0
+*Version* : 0.8.0
 
 
 ### Contact information
