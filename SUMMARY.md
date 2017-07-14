@@ -7,7 +7,7 @@
   - [Producing Events](docs/using/producing-events.md)
   - [Consuming Events (Low-level API)](docs/using/consuming-events-lola.md)
   - [Consuming Events (High-level API)](docs/using/consuming-events-hila.md)
-  - [Per-Event Type Authorization](docs/using-authorization.md)
+  - [Per-Event Type Authorization](docs/using/authorization.md)
   - [Client Libraries](docs/using/clients.md)
   - [(partial) Compared to Other Systems](docs/using/comparison.md)
 * [API Reference](docs/api-spec-generated/overview.md)
