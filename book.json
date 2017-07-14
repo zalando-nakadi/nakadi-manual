@@ -1,12 +1,12 @@
-{ 
-  
-  "structure": { 
-    "summary": "SUMMARY.md", 
-    "readme": "README.md" 
-  }, 
+{
+  "gitbook": "3.2.2",
+  "structure": {
+    "summary": "SUMMARY.md",
+    "readme": "README.md"
+  },
  "plugins": [
- 	"-sharing", 
- 	"-search", 
+ 	"-sharing",
+ 	"-search",
  	"-highlight",
  	 "anchors"
  ]
