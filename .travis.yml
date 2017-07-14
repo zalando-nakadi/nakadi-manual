@@ -2,7 +2,7 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-- 5.10.1
+- 6.9.1
 install:
 - npm install
 script:
@@ -15,5 +15,6 @@ notifications:
   email:
     recipients:
     - bill@dehora.net
-    on_success: always
-    on_failure: always
+    - team-aruha@zalando.de
+    on_success: change
+    on_failure: change
