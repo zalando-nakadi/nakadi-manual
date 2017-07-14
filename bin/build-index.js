@@ -34,7 +34,7 @@ request(API_URL, (error, response, body) => {
 
     const definitions = Object.keys(swagger.definitions)
     .sort()
-    .map(definition => `  - [${definition}](#${definition.toLowerCase()}})`);
+    .map(definition => `  - [${definition}](#${definition.toLowerCase()})`);
 
     const definitionIndex = [].concat.apply([], definitions).join('\n');
 
