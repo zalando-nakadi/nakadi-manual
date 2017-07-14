@@ -23,7 +23,8 @@ scratch.md
 npm-debug.log
 
 #Auto generated files
-docs/api-spec-generated
+docs/api-spec-generated/definitions.md
+docs/api-spec-generated/paths.md
 docs/api-spec-oai
 docs/api-spec-extensions/definitions/document-before-definitions.md
 docs/api-spec-extensions/paths/document-before-paths.md
