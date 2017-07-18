@@ -1,0 +1,488 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Producing Events · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="consuming-events-lola.html" />
+    
+    
+    <link rel="prev" href="event-types.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../using.html">
+            
+                <a href="../using.html">
+            
+                    
+                    Using Nakadi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="concepts.html">
+            
+                <a href="concepts.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="event-types.html">
+            
+                <a href="event-types.html">
+            
+                    
+                    Event Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="producing-events.html">
+            
+                <a href="producing-events.html">
+            
+                    
+                    Producing Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="consuming-events-lola.html">
+            
+                <a href="consuming-events-lola.html">
+            
+                    
+                    Consuming Events (Low-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="consuming-events-hila.html">
+            
+                <a href="consuming-events-hila.html">
+            
+                    
+                    Consuming Events (High-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Per-Event Type Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="clients.html">
+            
+                <a href="clients.html">
+            
+                    
+                    Client Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="comparison.html">
+            
+                <a href="comparison.html">
+            
+                    
+                    (partial) Compared to Other Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../api-spec-generated/overview.html">
+            
+                <a href="../api-spec-generated/overview.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../api-spec-generated/paths.html">
+            
+                <a href="../api-spec-generated/paths.html">
+            
+                    
+                    Paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../api-spec-generated/definitions.html">
+            
+                <a href="../api-spec-generated/definitions.html">
+            
+                    
+                    Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../api-spec-generated/security.html">
+            
+                <a href="../api-spec-generated/security.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../developing.html">
+            
+                <a href="../developing.html">
+            
+                    
+                    Building and Developing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../operating.html">
+            
+                <a href="../operating.html">
+            
+                    
+                    (todo) Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../recipes.html">
+            
+                <a href="../recipes.html">
+            
+                    
+                    (todo) Recipes and Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Producing Events</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="producing-events"><a name="producing-events" class="plugin-anchor" href="#producing-events"><i class="fa fa-link" aria-hidden="true"></i></a>Producing Events</h2>
+<h3 id="posting-an-event"><a name="posting-an-event" class="plugin-anchor" href="#posting-an-event"><i class="fa fa-link" aria-hidden="true"></i></a>Posting an Event</h3>
+<p>One or more events can be published by posting to an event type&apos;s stream.</p>
+<p>The URI for a stream is a nested resource and based on the event type&apos;s name - for example the &quot;widgets&quot; event type will have a relative resource path called <code>/event-types/widgets/events</code>.</p>
+<p>This example posts two events to the <code>order_received</code> stream:</p>
+<pre><code class="lang-sh">curl -v -XPOST -H &quot;Content-Type: application/json&quot; http://localhost:8080/event-types/order_received/events -d &apos;[
+  {
+    &quot;order_number&quot;: &quot;24873243241&quot;,
+    &quot;metadata&quot;: {
+      &quot;eid&quot;: &quot;d765de34-09c0-4bbb-8b1e-7160a33a0791&quot;,
+      &quot;occurred_at&quot;: &quot;2016-03-15T23:47:15+01:00&quot;
+    }
+  }, {
+    &quot;order_number&quot;: &quot;24873243242&quot;,
+    &quot;metadata&quot;: {
+      &quot;eid&quot;: &quot;a7671c51-49d1-48e6-bb03-b50dcf14f3d3&quot;,
+      &quot;occurred_at&quot;: &quot;2016-03-15T23:47:16+01:00&quot;
+    }
+  }]&apos;
+
+
+HTTP/1.1 200 OK
+</code></pre>
+<p>As shown above, the event stream accepts an array of events.</p>
+<h3 id="validation-strategies-and-effective-schema"><a name="validation-strategies-and-effective-schema" class="plugin-anchor" href="#validation-strategies-and-effective-schema"><i class="fa fa-link" aria-hidden="true"></i></a>Validation Strategies and Effective Schema</h3>
+<p>Each event sent to the stream will be validated relative to the <a href="event-types.html#effective-schema">effective schema</a> for the event type&apos;s category.</p>
+<p>The validation behavior and the effective schema varies based on the event type&apos;s category. For example, because the example above is a &apos;business&apos; category event type, as well as the fields defined in the event type&apos;s original schema, the events must also contain a <code>metadata</code> object with an <code>eid</code> and <code>occurred_at</code> fields in order to conform to the standard structure for that category.</p>
+<p>Once the event is validated, it is placed into a partition and made available
+to consumers. If the event is invalid, it is rejected by Nakadi.</p>
+<h3 id="enrichment-strategies"><a name="enrichment-strategies" class="plugin-anchor" href="#enrichment-strategies"><i class="fa fa-link" aria-hidden="true"></i></a>Enrichment Strategies</h3>
+<p><em>@@@TODO</em></p>
+<h3 id="event-ordering"><a name="event-ordering" class="plugin-anchor" href="#event-ordering"><i class="fa fa-link" aria-hidden="true"></i></a>Event Ordering</h3>
+<p>The order of events in the posted array will be the order they are
+published onto the event stream and seen by consumers. They are not re-ordered
+based on any values or properties of the data.</p>
+<p>Applications that need to order events for a particular entity or based on a identifiable key in the data should configure their event type with the <code>hash</code> partitioning strategy and name the fields that can be used to construct the key. This allows partial ordering for a given entity.</p>
+<p>Total ordering is not generally achievable with Nakadi (or Kafka) unless the partition size is configured to be size 1. In most cases, total ordering is not needed and in many cases is not desirable as it can severely limit system scalability and result in cluster hot spotting.</p>
+<h3 id="delivery-versus-arrival-order"><a name="delivery-versus-arrival-order" class="plugin-anchor" href="#delivery-versus-arrival-order"><i class="fa fa-link" aria-hidden="true"></i></a>Delivery versus Arrival Order</h3>
+<p>Nakadi preserves the order of events sent to it (the &quot;arrival order&quot;), but has
+no control over the network between it and the producer. In some cases it
+may be possible for events to leave the producer but arrive at Nakadi in a
+different order (the &quot;delivery order&quot;).</p>
+<p>Not all events need ordering guarantees but producers that do need end to end
+ordering have a few options they can take:</p>
+<ul>
+<li><p>Wait for a response from the Nakadi server before posting the next event. This trades off overall producer throughput for ordering.</p>
+</li>
+<li><p>Use the <code>parent_eids</code> field in the &apos;business&apos; and &apos;data&apos; categories. This acts as a causality mechanism  by allowing events to have &quot;parent&quot; events. Note the <code>parent_eids</code> option is not available in the &apos;undefined&apos; category.</p>
+</li>
+<li><p>Define and document the ordering semantics as part of the event type&apos;s scheme definition such that a consumer could use the information to sequence events at their end.</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="event-types.html" class="navigation navigation-prev " aria-label="Previous page: Event Types">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="consuming-events-lola.html" class="navigation navigation-next " aria-label="Next page: Consuming Events (Low-level API)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Producing Events","level":"1.4.3","depth":2,"next":{"title":"Consuming Events (Low-level API)","level":"1.4.4","depth":2,"path":"docs/using/consuming-events-lola.md","ref":"docs/using/consuming-events-lola.md","articles":[]},"previous":{"title":"Event Types","level":"1.4.2","depth":2,"path":"docs/using/event-types.md","ref":"docs/using/event-types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{},"plugins":["-sharing","-search","-highlight","anchors"],"pluginsConfig":{"anchors":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/using/producing-events.md","mtime":"2017-07-18T08:49:11.032Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T08:50:41.936Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,30 @@
+# Node rules:
+## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+## Dependency directory
+## Commenting this out is preferred by some people, see
+## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Book build output
+_book
+
+# eBook build output
+*.epub
+*.mobi
+*.pdf
+
+.DS_Store
+.idea
+*.iml
+scratch.md
+
+npm-debug.log
+
+#Auto generated files
+docs/api-spec-generated/definitions.md
+docs/api-spec-generated/paths.md
+docs/api-spec-oai
+docs/api-spec-extensions/definitions/document-before-definitions.md
+docs/api-spec-extensions/paths/document-before-paths.md

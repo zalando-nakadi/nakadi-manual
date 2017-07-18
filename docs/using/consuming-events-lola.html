@@ -1,0 +1,492 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Consuming Events (Low-level API) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="consuming-events-hila.html" />
+    
+    
+    <link rel="prev" href="producing-events.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../using.html">
+            
+                <a href="../using.html">
+            
+                    
+                    Using Nakadi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="concepts.html">
+            
+                <a href="concepts.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="event-types.html">
+            
+                <a href="event-types.html">
+            
+                    
+                    Event Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="producing-events.html">
+            
+                <a href="producing-events.html">
+            
+                    
+                    Producing Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="consuming-events-lola.html">
+            
+                <a href="consuming-events-lola.html">
+            
+                    
+                    Consuming Events (Low-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="consuming-events-hila.html">
+            
+                <a href="consuming-events-hila.html">
+            
+                    
+                    Consuming Events (High-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Per-Event Type Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="clients.html">
+            
+                <a href="clients.html">
+            
+                    
+                    Client Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="comparison.html">
+            
+                <a href="comparison.html">
+            
+                    
+                    (partial) Compared to Other Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../api-spec-generated/overview.html">
+            
+                <a href="../api-spec-generated/overview.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../api-spec-generated/paths.html">
+            
+                <a href="../api-spec-generated/paths.html">
+            
+                    
+                    Paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../api-spec-generated/definitions.html">
+            
+                <a href="../api-spec-generated/definitions.html">
+            
+                    
+                    Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../api-spec-generated/security.html">
+            
+                <a href="../api-spec-generated/security.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../developing.html">
+            
+                <a href="../developing.html">
+            
+                    
+                    Building and Developing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../operating.html">
+            
+                <a href="../operating.html">
+            
+                    
+                    (todo) Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../recipes.html">
+            
+                <a href="../recipes.html">
+            
+                    
+                    (todo) Recipes and Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Consuming Events (Low-level API)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="consuming-events-with-the-low-level-api"><a name="consuming-events-with-the-low-level-api" class="plugin-anchor" href="#consuming-events-with-the-low-level-api"><i class="fa fa-link" aria-hidden="true"></i></a>Consuming Events with the Low-level API</h2>
+<h3 id="connecting-to-a-stream"><a name="connecting-to-a-stream" class="plugin-anchor" href="#connecting-to-a-stream"><i class="fa fa-link" aria-hidden="true"></i></a>Connecting to a Stream</h3>
+<p>A consumer can open the stream for an Event Type via the <code>/events</code> sub-resource. For example to connect to the <code>order_received</code> stream send a GET request to its stream as follows:</p>
+<pre><code class="lang-sh">curl -v http://localhost:8080/event-types/order_received/events
+</code></pre>
+<p>The stream accepts various parameters from the consumer, which you can read about in the <a href="../api-spec-generated/overview.html">&quot;API Reference&quot;</a>. In this section we&apos;ll just describe the response format, along with how cursors and keepalives work.</p>
+<h3 id="http-event-stream"><a name="http-event-stream" class="plugin-anchor" href="#http-event-stream"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP Event Stream</h3>
+<p>The HTTP response on the wire will look something like this (the newline is show as <code>\n</code> for clarity):</p>
+<pre><code class="lang-sh">curl -v http://localhost:8080/event-types/order_received/events 
+
+
+HTTP/1.1 200 OK
+Content-Type: application/x-json-stream
+
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;0&quot;,&quot;offset&quot;:&quot;6&quot;},&quot;events&quot;:[...]}\n
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;0&quot;,&quot;offset&quot;:&quot;5&quot;},&quot;events&quot;:[...]}\n
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;0&quot;,&quot;offset&quot;:&quot;4&quot;},&quot;events&quot;:[...]}\n
+</code></pre>
+<p>Nakadi groups events into batch responses (see the next section, &quot;Batch Responses&quot; for some more details). Batches are separated by a newline and each available batch will be emitted on a single line. If there are no new batches the server will occasionally emit an empty batch (see the section &quot;Event Stream Keepalives&quot; further down).</p>
+<p>Technically, while each batch is a JSON document, the overall response is not valid JSON. For this reason it is served as the media type <code>application/x-stream-json</code> rather than <code>application/json</code>. Consumers can use the single line delimited structure to frame data for JSON parsing.</p>
+<h3 id="batch-response-formats"><a name="batch-response-formats" class="plugin-anchor" href="#batch-response-formats"><i class="fa fa-link" aria-hidden="true"></i></a>Batch Response Formats</h3>
+<p>A pretty-printed batch object looks like this -</p>
+<pre><code class="lang-json">{
+  &quot;cursor&quot;: {
+    &quot;partition&quot;: &quot;0&quot;,
+    &quot;offset&quot;: &quot;4&quot;
+  },
+  &quot;events&quot;: [...]
+}
+</code></pre>
+<p>Each batch belongs to a single partition. The <code>cursor</code> object describes the partition and the offset for this batch of events. The cursor allow clients to checkpoint their position in the stream&apos;s partition. Note that individual events in the stream don&apos;t have cursors, they live at the level of a batch. </p>
+<p>The <code>events</code> array contains a list of events that were published in the order they arrived from the producer. Note that while the producer can also send batches of events, there is no strict correlation between the batches the consumer is given and the ones the producer sends. Nakadi will regroup events send by the producer and distribute them across partitions as needed.</p>
+<h3 id="cursors-and-offsets"><a name="cursors-and-offsets" class="plugin-anchor" href="#cursors-and-offsets"><i class="fa fa-link" aria-hidden="true"></i></a>Cursors and Offsets</h3>
+<p>By default the <code>/events</code> resource will return data from all partitions of an event type stream and will do so from the end (or &quot;tail&quot;) of the stream. To select only particular partitions and a position in the stream to start, you can supply an <code>X-Nakadi-Cursors</code> header in the request:</p>
+<pre><code class="lang-sh">curl -v http://localhost:8080/event-types/order_received/events \
+  -H &apos;X-Nakadi-Cursors: [{&quot;partition&quot;: &quot;0&quot;, &quot;offset&quot;:&quot;12&quot;}]&apos;
+</code></pre>
+<p>The <code>X-Nakadi-Cursors</code> header value is a JSON array of <em>cursors</em>. Each cursor in the array describes its partition for the stream and an offset to stream from. </p>
+<p>The <code>offset</code> value of the cursor allows you select where in the stream partition you want to consume from. This can be any known offset value, or the dedicated value <code>begin</code> which will start the stream from the beginning. For example, to read from partition <code>0</code> from the beginning:</p>
+<pre><code class="lang-sh">curl -v http://localhost:8080/event-types/order_received/events \
+  -H &apos;X-Nakadi-Cursors:[{&quot;partition&quot;: &quot;0&quot;, &quot;offset&quot;:&quot;begin&quot;}]&apos;
+</code></pre>
+<h3 id="event-stream-keepalives"><a name="event-stream-keepalives" class="plugin-anchor" href="#event-stream-keepalives"><i class="fa fa-link" aria-hidden="true"></i></a>Event Stream Keepalives</h3>
+<p>If there are no events to be delivered the server will keep a streaming connection open by periodically sending a batch with no events but which contains a <code>cursor</code> pointing to the current offset. For example:</p>
+<pre><code class="lang-sh">curl -v http://localhost:8080/event-types/order_received/events 
+
+
+HTTP/1.1 200 OK
+Content-Type: application/x-json-stream
+
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;0&quot;,&quot;offset&quot;:&quot;6&quot;},&quot;events&quot;:[...]}\n
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;0&quot;,&quot;offset&quot;:&quot;6&quot;}}\n
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;0&quot;,&quot;offset&quot;:&quot;6&quot;}}\n
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;0&quot;,&quot;offset&quot;:&quot;6&quot;}}\n
+</code></pre>
+<p>This can be treated as a keep-alive control.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="producing-events.html" class="navigation navigation-prev " aria-label="Previous page: Producing Events">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="consuming-events-hila.html" class="navigation navigation-next " aria-label="Next page: Consuming Events (High-level API)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Consuming Events (Low-level API)","level":"1.4.4","depth":2,"next":{"title":"Consuming Events (High-level API)","level":"1.4.5","depth":2,"path":"docs/using/consuming-events-hila.md","ref":"docs/using/consuming-events-hila.md","articles":[]},"previous":{"title":"Producing Events","level":"1.4.3","depth":2,"path":"docs/using/producing-events.md","ref":"docs/using/producing-events.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{},"plugins":["-sharing","-search","-highlight","anchors"],"pluginsConfig":{"anchors":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/using/consuming-events-lola.md","mtime":"2017-07-18T08:49:11.032Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T08:50:41.936Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

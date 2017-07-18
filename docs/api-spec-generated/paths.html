@@ -1,0 +1,3487 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Paths · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="definitions.html" />
+    
+    
+    <link rel="prev" href="overview.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../using.html">
+            
+                <a href="../using.html">
+            
+                    
+                    Using Nakadi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../using/concepts.html">
+            
+                <a href="../using/concepts.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../using/event-types.html">
+            
+                <a href="../using/event-types.html">
+            
+                    
+                    Event Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../using/producing-events.html">
+            
+                <a href="../using/producing-events.html">
+            
+                    
+                    Producing Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../using/consuming-events-lola.html">
+            
+                <a href="../using/consuming-events-lola.html">
+            
+                    
+                    Consuming Events (Low-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../using/consuming-events-hila.html">
+            
+                <a href="../using/consuming-events-hila.html">
+            
+                    
+                    Consuming Events (High-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../using/authorization.html">
+            
+                <a href="../using/authorization.html">
+            
+                    
+                    Per-Event Type Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../using/clients.html">
+            
+                <a href="../using/clients.html">
+            
+                    
+                    Client Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../using/comparison.html">
+            
+                <a href="../using/comparison.html">
+            
+                    
+                    (partial) Compared to Other Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="paths.html">
+            
+                <a href="paths.html">
+            
+                    
+                    Paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="definitions.html">
+            
+                <a href="definitions.html">
+            
+                    
+                    Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="security.html">
+            
+                <a href="security.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../developing.html">
+            
+                <a href="../developing.html">
+            
+                    
+                    Building and Developing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../operating.html">
+            
+                <a href="../operating.html">
+            
+                    
+                    (todo) Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../recipes.html">
+            
+                <a href="../recipes.html">
+            
+                    
+                    (todo) Recipes and Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Paths</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="resources"><a name="resources" class="plugin-anchor" href="#resources"><i class="fa fa-link" aria-hidden="true"></i></a>Resources</h2>
+<ul>
+<li><a href="#get-event-types">GET /event-types</a></li>
+<li><a href="#post-event-types">POST /event-types</a></li>
+<li><a href="#get-event-typesname">GET /event-types/{name}</a></li>
+<li><a href="#put-event-typesname">PUT /event-types/{name}</a></li>
+<li><a href="#delete-event-typesname">DELETE /event-types/{name}</a></li>
+<li><a href="#post-event-typesnamecursor-distances">POST /event-types/{name}/cursor-distances</a></li>
+<li><a href="#post-event-typesnamecursors-lag">POST /event-types/{name}/cursors-lag</a></li>
+<li><a href="#post-event-typesnameevents">POST /event-types/{name}/events</a></li>
+<li><a href="#get-event-typesnameevents">GET /event-types/{name}/events</a></li>
+<li><a href="#get-event-typesnamepartitions">GET /event-types/{name}/partitions</a></li>
+<li><a href="#get-event-typesnamepartitionspartition">GET /event-types/{name}/partitions/{partition}</a></li>
+<li><a href="#get-event-typesnameschemas">GET /event-types/{name}/schemas</a></li>
+<li><a href="#get-event-typesnameschemasversion">GET /event-types/{name}/schemas/{version}</a></li>
+<li><a href="#post-event-typesnameshifted-cursors">POST /event-types/{name}/shifted-cursors</a></li>
+<li><a href="#post-event-typesnametimelines">POST /event-types/{name}/timelines</a></li>
+<li><a href="#get-event-typesnametimelines">GET /event-types/{name}/timelines</a></li>
+<li><a href="#delete-event-typesnametimelinesid">DELETE /event-types/{name}/timelines/{id}</a></li>
+<li><a href="#get-metrics">GET /metrics</a></li>
+<li><a href="#get-registryenrichment-strategies">GET /registry/enrichment-strategies</a></li>
+<li><a href="#get-registrypartition-strategies">GET /registry/partition-strategies</a></li>
+<li><a href="#get-settingsblacklist">GET /settings/blacklist</a></li>
+<li><a href="#put-settingsblacklistblacklisttypename">PUT /settings/blacklist/{blacklist_type}/{name}</a></li>
+<li><a href="#delete-settingsblacklistblacklisttypename">DELETE /settings/blacklist/{blacklist_type}/{name}</a></li>
+<li><a href="#get-settingsfeatures">GET /settings/features</a></li>
+<li><a href="#post-settingsfeatures">POST /settings/features</a></li>
+<li><a href="#get-storages">GET /storages</a></li>
+<li><a href="#post-storages">POST /storages</a></li>
+<li><a href="#get-storagesid">GET /storages/{id}</a></li>
+<li><a href="#delete-storagesid">DELETE /storages/{id}</a></li>
+<li><a href="#post-subscriptions">POST /subscriptions</a></li>
+<li><a href="#get-subscriptions">GET /subscriptions</a></li>
+<li><a href="#get-subscriptionssubscriptionid">GET /subscriptions/{subscription_id}</a></li>
+<li><a href="#delete-subscriptionssubscriptionid">DELETE /subscriptions/{subscription_id}</a></li>
+<li><a href="#get-subscriptionssubscriptionidcursors">GET /subscriptions/{subscription_id}/cursors</a></li>
+<li><a href="#post-subscriptionssubscriptionidcursors">POST /subscriptions/{subscription_id}/cursors</a></li>
+<li><a href="#patch-subscriptionssubscriptionidcursors">PATCH /subscriptions/{subscription_id}/cursors</a></li>
+<li><a href="#get-subscriptionssubscriptionidevents">GET /subscriptions/{subscription_id}/events</a></li>
+<li><a href="#get-subscriptionssubscriptionidstats">GET /subscriptions/{subscription_id}/stats</a></li>
+</ul>
+<p><a name="paths"></a></p>
+<h2 id="paths"><a name="paths" class="plugin-anchor" href="#paths"><i class="fa fa-link" aria-hidden="true"></i></a>Paths</h2>
+<p><a name="event-types-post"></a></p>
+<h3 id="post-event-types"><a name="post-event-types" class="plugin-anchor" href="#post-event-types"><i class="fa fa-link" aria-hidden="true"></i></a>POST /event-types</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Creates a new <code>EventType</code>.</p>
+<p>The fields enrichment-strategies and partition-resolution-strategy
+have all an effect on the incoming Event of this EventType. For its impacts on the reception
+of events please consult the Event submission API methods.</p>
+<ul>
+<li><p>Validation strategies define an array of validation stategies to be evaluated on reception
+of an <code>Event</code> of this <code>EventType</code>. Details of usage can be found in this external document</p>
+<ul>
+<li><a href="http://zalando.github.io/nakadi-manual/" target="_blank">http://zalando.github.io/nakadi-manual/</a></li>
+</ul>
+</li>
+<li><p>Enrichment strategy. (todo: define this part of the API).</p>
+</li>
+<li><p>The schema of an <code>EventType</code> is defined as an <code>EventTypeSchema</code>. Currently only
+the value <code>json-schema</code> is supported, representing JSON Schema draft 04.</p>
+</li>
+</ul>
+<p>Following conditions are enforced. Not meeting them will fail the request with the indicated
+status (details are provided in the Problem object):</p>
+<ul>
+<li><p>EventType name on creation must be unique (or attempting to update an <code>EventType</code> with
+this method), otherwise the request is rejected with status 409 Conflict.</p>
+</li>
+<li><p>Using <code>EventTypeSchema.type</code> other than json-schema or passing a <code>EventTypeSchema.schema</code>
+that is invalid with respect to the schema&apos;s type. Rejects with 422 Unprocessable entity.</p>
+</li>
+<li><p>Referring any Enrichment or Partition strategies that do not exist or
+whose parametrization is deemed invalid. Rejects with 422 Unprocessable entity.</p>
+</li>
+</ul>
+<p>Nakadi MIGHT impose necessary schema, validation and enrichment minimal configurations that
+MUST be followed by all EventTypes (examples include: validation rules to match the schema;
+enriching every Event with the reception date-type; adhering to a set of schema fields that
+are mandatory for all EventTypes). <strong>The mechanism to set and inspect such rules is not
+defined at this time and might not be exposed in the API.</strong></p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>event-type</strong>  <br><em>required</em></td>
+<td>EventType to be created</td>
+<td><a href="definitions.html#eventtype">EventType</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>201</strong></td>
+<td>Created</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>409</strong></td>
+<td>Conflict, for example on creation of EventType with already existing name.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable Entity</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>schema-registry-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_type.write</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-get"></a></p>
+<h3 id="get-event-types"><a name="get-event-types" class="plugin-anchor" href="#get-event-types"><i class="fa fa-link" aria-hidden="true"></i></a>GET /event-types</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Returns a list of all registered <code>EventType</code>s</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Ok</td>
+<td>&lt; <a href="definitions.html#eventtype">EventType</a> &gt; array</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>schema-registry-api</li>
+</ul>
+<p><a name="event-types-name-get"></a></p>
+<h3 id="get-event-typesname"><a name="get-event-typesname" class="plugin-anchor" href="#get-event-typesname"><i class="fa fa-link" aria-hidden="true"></i></a>GET /event-types/{name}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Returns the <code>EventType</code> identified by its name.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the EventType to load.</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Ok</td>
+<td><a href="definitions.html#eventtype">EventType</a></td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>schema-registry-api</li>
+</ul>
+<p><a name="event-types-name-put"></a></p>
+<h3 id="put-event-typesname"><a name="put-event-typesname" class="plugin-anchor" href="#put-event-typesname"><i class="fa fa-link" aria-hidden="true"></i></a>PUT /event-types/{name}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Updates the <code>EventType</code> identified by its name. Behaviour is the same as creation of
+<code>EventType</code> (See POST /event-type) except where noted below.</p>
+<p>The name field cannot be changed. Attempting to do so will result in a 422 failure.</p>
+<p>Modifications to the schema are constrained by the specified <code>compatibility_mode</code>.</p>
+<p>Updating the <code>EventType</code> is only allowed for clients that satisfy the authorization <code>admin</code> requirements,
+if it exists.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the EventType to update.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>event-type</strong>  <br><em>required</em></td>
+<td>EventType to be updated.</td>
+<td><a href="definitions.html#eventtype">EventType</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Ok</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable Entity</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>schema-registry-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_type.write</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-delete"></a></p>
+<h3 id="delete-event-typesname"><a name="delete-event-typesname" class="plugin-anchor" href="#delete-event-typesname"><i class="fa fa-link" aria-hidden="true"></i></a>DELETE /event-types/{name}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Deletes an <code>EventType</code> identified by its name. All events in the <code>EventType</code>&apos;s stream&apos; will
+also be removed. <strong>Note</strong>: deletion happens asynchronously, which has the following
+consequences:</p>
+<ul>
+<li><p>Creation of an equally named <code>EventType</code> before the underlying topic deletion is complete
+might not succeed (failure is a 409 Conflict).</p>
+</li>
+<li><p>Events in the stream may be visible for a short period of time before being removed.</p>
+<p>Depending on the Nakadi configuration, the oauth resource owner username may have to be equal to
+&apos;nakadi.oauth2.adminClientId&apos; property to be able to access this endpoint.</p>
+<p>Updating the <code>EventType</code> is only allowed for clients that satisfy the authorization <code>admin</code> requirements,
+if it exists.</p>
+</li>
+</ul>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the EventType to delete.</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>EventType is successfuly removed</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>schema-registry-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.config.write</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-cursor-distances-post"></a></p>
+<h3 id="post-event-typesnamecursor-distances"><a name="post-event-typesnamecursor-distances" class="plugin-anchor" href="#post-event-typesnamecursor-distances"><i class="fa fa-link" aria-hidden="true"></i></a>POST /event-types/{name}/cursor-distances</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>GET with payload.</p>
+<p>Calculate the distance between two offsets. This is useful for performing checks for data completeness, when
+a client has read some batches and wants to be sure that all delivered events have been correctly processed.</p>
+<p>If per-EventType authorization is enabled, the caller must be authorized to read from the EventType.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the EventType</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>cursors-distances-query</strong>  <br><em>required</em></td>
+<td>List of pairs of cursors: <code>initial_cursor</code> and <code>final_cursor</code>. Used as input by Nakadi to<br>calculate how many events there are between two cursors. The distance doesn&apos;t include the <code>initial_cursor</code><br>but includes the <code>final_cursor</code>. So if they are equal the result is zero.</td>
+<td>&lt; <a href="definitions.html#cursordistancequery">CursorDistanceQuery</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td>&lt; <a href="definitions.html#cursordistanceresult">CursorDistanceResult</a> &gt; array</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden because of missing scope or EventType authorization failure.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable Entity</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>management-api</li>
+<li>monitoring</li>
+<li>unmanaged-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-cursors-lag-post"></a></p>
+<h3 id="post-event-typesnamecursors-lag"><a name="post-event-typesnamecursors-lag" class="plugin-anchor" href="#post-event-typesnamecursors-lag"><i class="fa fa-link" aria-hidden="true"></i></a>POST /event-types/{name}/cursors-lag</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>GET with payload.</p>
+<p>This endpoint is mostly interesting for monitoring purposes. Used when a consumer wants to know how far behind
+in the stream its application is lagging.</p>
+<p>It provides the number of unconsumed events for each cursor&apos;s partition.</p>
+<p>If per-EventType authorization is enabled, the caller must be authorized to read from the EventType.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>EventType name</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>cursors</strong>  <br><em>required</em></td>
+<td>Each cursor indicates the partition and offset consumed by the client. When a cursor is provided,<br>Nakadi calculates the consumer lag, e.g. the number of events between the provided offset and the most<br>recent published event. This lag will be present in the response as <code>unconsumed_events</code> property.<br><br>It&apos;s not mandatory to specify cursors for every partition.<br><br>The lag calculation is non inclusive, e.g. if the provided offset is the offset of the latest published<br>event, the number of <code>unconsumed_events</code> will be zero.<br><br>All provided cursors must be valid, i.e. a non expired cursor of an event in the stream.</td>
+<td>&lt; <a href="definitions.html#cursor">Cursor</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td>&lt; <a href="definitions.html#partition">Partition</a> &gt; array</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden because of missing scope or EventType authorization failure.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable Entity</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>management-api</li>
+<li>monitoring</li>
+<li>unmanaged-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-events-post"></a></p>
+<h3 id="post-event-typesnameevents"><a name="post-event-typesnameevents" class="plugin-anchor" href="#post-event-typesnameevents"><i class="fa fa-link" aria-hidden="true"></i></a>POST /event-types/{name}/events</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Publishes a batch of <code>Event</code>s of this <code>EventType</code>. All items must be of the EventType
+identified by <code>name</code>.</p>
+<p>Reception of Events will always respect the configuration of its <code>EventType</code> with respect to
+validation, enrichment and partition. The steps performed on reception of incoming message
+are:</p>
+<ol>
+<li><p>Every validation rule specified for the <code>EventType</code> will be checked in order against the
+incoming Events. Validation rules are evaluated in the order they are defined and the Event
+is <strong>rejected</strong> in the first case of failure. If the offending validation rule provides
+information about the violation it will be included in the <code>BatchItemResponse</code>.  If the
+<code>EventType</code> defines schema validation it will be performed at this moment. The size of each
+Event will also be validated. The maximum size per Event is 999,000 bytes. We use the batch
+input to measure the size of events, so unnecessary spaces, tabs, and carriage returns will
+count towards the event size.</p>
+</li>
+<li><p>Once the validation succeeded, the content of the Event is updated according to the
+enrichment rules in the order the rules are defined in the <code>EventType</code>.  No preexisting
+value might be changed (even if added by an enrichment rule). Violations on this will force
+the immediate <strong>rejection</strong> of the Event. The invalid overwrite attempt will be included in
+the item&apos;s <code>BatchItemResponse</code> object.</p>
+</li>
+<li><p>The incoming Event&apos;s relative ordering is evaluated according to the rule on the
+<code>EventType</code>. Failure to evaluate the rule will <strong>reject</strong> the Event.</p>
+</li>
+</ol>
+<p>Given the batched nature of this operation, any violation on validation or failures on
+enrichment or partitioning will cause the whole batch to be rejected, i.e. none of its
+elements are pushed to the underlying broker.</p>
+<p>Failures on writing of specific partitions to the broker might influence other
+partitions. Failures at this stage will fail only the affected partitions.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the EventType</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>event</strong>  <br><em>required</em></td>
+<td>The Event being published</td>
+<td>&lt; <a href="definitions.html#event">Event</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>All events in the batch have been successfully published.</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>207</strong></td>
+<td>At least one event has failed to be submitted. The batch might be partially submitted.</td>
+<td>&lt; <a href="definitions.html#batchitemresponse">BatchItemResponse</a> &gt; array</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access is forbidden for the client or event type</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>At least one event failed to be validated, enriched or partitioned. None were submitted.</td>
+<td>&lt; <a href="definitions.html#batchitemresponse">BatchItemResponse</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>stream-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.write</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-events-get"></a></p>
+<h3 id="get-event-typesnameevents"><a name="get-event-typesnameevents" class="plugin-anchor" href="#get-event-typesnameevents"><i class="fa fa-link" aria-hidden="true"></i></a>GET /event-types/{name}/events</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Starts a stream delivery for the specified partitions of the given EventType.</p>
+<p>The event stream is formatted as a sequence of <code>EventStreamBatch</code>es separated by <code>\n</code>. Each
+<code>EventStreamBatch</code> contains a chunk of Events and a <code>Cursor</code> pointing to the <strong>end</strong> of the
+chunk (i.e. last delivered Event). The cursor might specify the offset with the symbolic
+value <code>BEGIN</code>, which will open the stream starting from the oldest available offset in the
+partition.</p>
+<p>Currently the <code>application/x-json-stream</code> format is the only one supported by the system,
+but in the future other media types may be supported.</p>
+<p>If streaming for several distinct partitions, each one is an independent <code>EventStreamBatch</code>.</p>
+<p>The initialization of a stream can be parameterized in terms of size of each chunk, timeout
+for flushing each chunk, total amount of delivered Events and total time for the duration of
+the stream.</p>
+<p>Nakadi will keep a streaming connection open even if there are no events to be delivered. In
+this case the timeout for the flushing of each chunk will still apply and the
+<code>EventStreamBatch</code> will contain only the Cursor pointing to the same offset. This can be
+treated as a keep-alive control for some load balancers.</p>
+<p>The tracking of the current offset in the partitions and of which partitions is being read
+is in the responsibility of the client. No commits are needed.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-nakadi-cursors</strong>  <br><em>optional</em></td>
+<td>Cursors indicating the partitions to read from and respective starting offsets.<br><br>Assumes the offset on each cursor is not inclusive (i.e., first delivered Event is the<br><strong>first one after</strong> the one pointed to in the cursor).<br><br>If the header is not present, the stream for all partitions defined for the EventType<br>will start from the newest event available in the system at the moment of making this<br>call.<br><br><strong>Note:</strong> we are not using query parameters for passing the cursors only because of the<br>length limitations on the HTTP query. Another way to initiate this call would be the<br>POST method with cursors passed in the method body. This approach can implemented in the<br>future versions of this API.</td>
+<td>&lt; string (#/definitions/Cursor) &gt; array</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>EventType name to get events about</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>batch_flush_timeout</strong>  <br><em>optional</em></td>
+<td>Maximum time in seconds to wait for the flushing of each chunk (per partition).<br><br><em> If the amount of buffered Events reaches <code>batch_limit</code> before this <code>batch_flush_timeout</code><br>is reached, the messages are immediately flushed to the client and batch flush timer is reset.<br><br></em> If 0 or undefined, will assume 30 seconds.</td>
+<td>number (int32)</td>
+<td><code>30</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>batch_limit</strong>  <br><em>optional</em></td>
+<td>Maximum number of <code>Event</code>s in each chunk (and therefore per partition) of the stream.</td>
+<td>integer (int32)</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>stream_keep_alive_limit</strong>  <br><em>optional</em></td>
+<td>Maximum number of empty keep alive batches to get in a row before closing the connection.<br><br>If 0 or undefined will send keep alive messages indefinitely.</td>
+<td>integer (int32)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>stream_limit</strong>  <br><em>optional</em></td>
+<td>Maximum number of <code>Event</code>s in this stream (over all partitions being streamed in this<br>connection).<br><br><em> If 0 or undefined, will stream batches indefinitely.<br><br></em> Stream initialization will fail if <code>stream_limit</code> is lower than <code>batch_limit</code>.</td>
+<td>integer (int32)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>stream_timeout</strong>  <br><em>optional</em></td>
+<td>Maximum time in seconds a stream will live before connection is closed by the server.<br>If 0 or unspecified will stream indefinitely.<br><br>If this timeout is reached, any pending messages (in the sense of <code>stream_limit</code>) will be flushed<br>to the client.<br><br>Stream initialization will fail if <code>stream_timeout</code> is lower than <code>batch_flush_timeout</code>.</td>
+<td>number (int32)</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Starts streaming to the client.<br>Stream format is a continuous series of <code>EventStreamBatch</code>s separated by <code>\n</code></td>
+<td><a href="definitions.html#eventstreambatch">EventStreamBatch</a></td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access is forbidden for the client or event type</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable entity</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>429</strong></td>
+<td>Too Many Requests. The client reached the maximum amount of simultaneous connections to a single partition</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="produces"><a name="produces" class="plugin-anchor" href="#produces"><i class="fa fa-link" aria-hidden="true"></i></a>Produces</h4>
+<ul>
+<li><code>application/x-json-stream</code></li>
+</ul>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>stream-api</li>
+<li>unmanaged-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-partitions-get"></a></p>
+<h3 id="get-event-typesnamepartitions"><a name="get-event-typesnamepartitions" class="plugin-anchor" href="#get-event-typesnamepartitions"><i class="fa fa-link" aria-hidden="true"></i></a>GET /event-types/{name}/partitions</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Lists the <code>Partition</code>s for the given event-type.</p>
+<p>This endpoint is mostly interesting for monitoring purposes or in cases when consumer wants
+to start consuming older messages.
+If per-EventType authorization is enabled, the caller must be authorized to read from the EventType.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>EventType name</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>cursors</strong>  <br><em>optional</em></td>
+<td>Each cursor indicates the partition and offset consumed by the client. When this parameter is provided,<br>Nakadi calculates the consumer lag, e.g. the number of events between the provided offset and the most<br>recent published event. This lag will be present in the response as <code>unconsumed_events</code> property.<br><br>It&apos;s not mandatory to specify cursors for every partition.<br><br>The lag calculation is non inclusive, e.g. if the provided offset is the offset of the latest published<br>event, the number of <code>unconsumed_events</code> will be zero.<br><br>The value of this parameter must be a json array URL encoded.</td>
+<td>&lt; string (#/definitions/Cursor) &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td>&lt; <a href="definitions.html#partition">Partition</a> &gt; array</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden because of missing scope or EventType authorization failure.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>management-api</li>
+<li>monitoring</li>
+<li>unmanaged-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-partitions-partition-get"></a></p>
+<h3 id="get-event-typesnamepartitionspartition"><a name="get-event-typesnamepartitionspartition" class="plugin-anchor" href="#get-event-typesnamepartitionspartition"><i class="fa fa-link" aria-hidden="true"></i></a>GET /event-types/{name}/partitions/{partition}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Returns the given <code>Partition</code> of this EventType. If per-EventType authorization is enabled, the caller must
+be authorized to read from the EventType.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>EventType name</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>partition</strong>  <br><em>required</em></td>
+<td>Partition id</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>consumed_offset</strong>  <br><em>optional</em></td>
+<td>Offset to query for unconsumed events. Depends on <code>partition</code> parameter. When present adds the property<br><code>unconsumed_events</code> to the response partition object.</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td><a href="definitions.html#partition">Partition</a></td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden because of missing scope or EventType authorization failure.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>management-api</li>
+<li>unmanaged-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-schemas-get"></a></p>
+<h3 id="get-event-typesnameschemas"><a name="get-event-typesnameschemas" class="plugin-anchor" href="#get-event-typesnameschemas"><i class="fa fa-link" aria-hidden="true"></i></a>GET /event-types/{name}/schemas</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>List of schemas ordered from most recent to oldest.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>EventType name</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>limit</strong>  <br><em>optional</em></td>
+<td>maximum number of schemas retuned in one page</td>
+<td>integer (int64)</td>
+<td><code>20</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>offset</strong>  <br><em>optional</em></td>
+<td>page offset</td>
+<td>integer (int64)</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td><a href="#event-types-name-schemas-get-response-200">Response 200</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-schemas-get-response-200"></a>
+<strong>Response 200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>_links</strong>  <br><em>required</em></td>
+<td></td>
+<td><a href="definitions.html#paginationlinks">PaginationLinks</a></td>
+</tr>
+<tr>
+<td><strong>items</strong>  <br><em>required</em></td>
+<td>list of schemas.</td>
+<td>&lt; <a href="definitions.html#eventtypeschema">EventTypeSchema</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>schema-registry-api</li>
+</ul>
+<p><a name="event-types-name-schemas-version-get"></a></p>
+<h3 id="get-event-typesnameschemasversion"><a name="get-event-typesnameschemasversion" class="plugin-anchor" href="#get-event-typesnameschemasversion"><i class="fa fa-link" aria-hidden="true"></i></a>GET /event-types/{name}/schemas/{version}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Retrieves a given schema version. A special <code>{version}</code> key named &apos;latest&apos; is provided for
+convenience.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>EventType name</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>version</strong>  <br><em>required</em></td>
+<td>EventType schema version</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Schema object.</td>
+<td><a href="definitions.html#eventtypeschema">EventTypeSchema</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>schema-registry-api</li>
+</ul>
+<p><a name="event-types-name-shifted-cursors-post"></a></p>
+<h3 id="post-event-typesnameshifted-cursors"><a name="post-event-typesnameshifted-cursors" class="plugin-anchor" href="#post-event-typesnameshifted-cursors"><i class="fa fa-link" aria-hidden="true"></i></a>POST /event-types/{name}/shifted-cursors</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Transforms a list of Cursors with <code>shift</code> into a list without <code>shift</code>s. This is useful when there is the need
+for randomly access events in the stream.
+If per-EventType authorization is enabled, the caller must be authorized to read from the EventType.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>EventType name</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>cursors</strong>  <br><em>required</em></td>
+<td>GET with payload.<br><br>Cursors indicating the positions to be calculated. Given a initial cursor, with partition and offset, it&apos;s<br>possible to obtain another cursor that is relatively forward or backward to it. When <code>shift</code> is positive,<br>Nakadi will respond with a cursor that in forward <code>shif</code> positions based on the initial <code>partition</code> and<br><code>offset</code>. In case <code>shift</code> is negative, Nakadi will move the cursor backward.<br><br>Note: It&apos;s not currently possible to shift cursors based on time. It&apos;s only possible to shift cursors<br>based on the number of events to forward of backward given by <code>shift</code>.</td>
+<td>&lt; <a href="definitions.html#shiftedcursor">ShiftedCursor</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td>&lt; <a href="definitions.html#cursor">Cursor</a> &gt; array</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden because of missing scope or EventType authorization failure.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>It&apos;s only possible to navigate from a valid cursor to another valid cursor, i.e. <code>partition</code>s and<br><code>offset</code>s must exist and not be expired. Any combination of parameters that might break this rule will<br>result in 422. For example:<br><br>- if the initial <code>partition</code> and <code>offset</code> are expired.<br>- if the <code>shift</code> provided leads to a already expired cursor.<br>- if the <code>shift</code> provided leads to a cursor that is not yet existent, i.e. it&apos;s pointing to<br>some cursor yet to be generated in the future.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>management-api</li>
+<li>monitoring</li>
+<li>unmanaged-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-timelines-post"></a></p>
+<h3 id="post-event-typesnametimelines"><a name="post-event-typesnametimelines" class="plugin-anchor" href="#post-event-typesnametimelines"><i class="fa fa-link" aria-hidden="true"></i></a>POST /event-types/{name}/timelines</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Creates a new timeline for an event type and makes it active.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the EventType</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>timeline_request</strong>  <br><em>required</em></td>
+<td></td>
+<td><a href="#event-types-name-timelines-post-timeline_request">timeline_request</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-timelines-post-timeline_request"></a>
+<strong>timeline_request</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>storage_id</strong>  <br><em>required</em></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>201</strong></td>
+<td>New timeline is created and in use</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such event type</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable entity due to non existing storage</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>timelines-api</li>
+</ul>
+<p><a name="event-types-name-timelines-get"></a></p>
+<h3 id="get-event-typesnametimelines"><a name="get-event-typesnametimelines" class="plugin-anchor" href="#get-event-typesnametimelines"><i class="fa fa-link" aria-hidden="true"></i></a>GET /event-types/{name}/timelines</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>List timelines for a given event type.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the EventType to list timelines for.</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td>&lt; <a href="#event-types-name-timelines-get-response-200">Response 200</a> &gt; array</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such event type</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="event-types-name-timelines-get-response-200"></a>
+<strong>Response 200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cleaned_up_at</strong>  <br><em>optional</em></td>
+<td>string (date-time)</td>
+</tr>
+<tr>
+<td><strong>created_at</strong>  <br><em>optional</em></td>
+<td>string (date-time)</td>
+</tr>
+<tr>
+<td><strong>event_type</strong>  <br><em>optional</em></td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>id</strong>  <br><em>optional</em></td>
+<td>string (uuid)</td>
+</tr>
+<tr>
+<td><strong>latest_position</strong>  <br><em>optional</em></td>
+<td>object</td>
+</tr>
+<tr>
+<td><strong>order</strong>  <br><em>optional</em></td>
+<td>integer</td>
+</tr>
+<tr>
+<td><strong>storage_id</strong>  <br><em>optional</em></td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>switched_at</strong>  <br><em>optional</em></td>
+<td>string (date-time)</td>
+</tr>
+<tr>
+<td><strong>topic</strong>  <br><em>optional</em></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>timelines-api</li>
+</ul>
+<p><a name="event-types-name-timelines-id-delete"></a></p>
+<h3 id="delete-event-typesnametimelinesid"><a name="delete-event-typesnametimelinesid" class="plugin-anchor" href="#delete-event-typesnametimelinesid"><i class="fa fa-link" aria-hidden="true"></i></a>DELETE /event-types/{name}/timelines/{id}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Deletes a timeline if there is only one timeline.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>id</strong>  <br><em>required</em></td>
+<td>timeline id</td>
+<td>string (uuid)</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the EventType.</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Timeline was deleted</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>No such event type or timeline id</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>could not delete timeline, because there is more than one timeline</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>timelines-api</li>
+</ul>
+<p><a name="metrics-get"></a></p>
+<h3 id="get-metrics"><a name="get-metrics" class="plugin-anchor" href="#get-metrics"><i class="fa fa-link" aria-hidden="true"></i></a>GET /metrics</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Get monitoring metrics</p>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Ok</td>
+<td><a href="definitions.html#metrics">Metrics</a></td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>monitoring</li>
+</ul>
+<p><a name="registry-enrichment-strategies-get"></a></p>
+<h3 id="get-registryenrichment-strategies"><a name="get-registryenrichment-strategies" class="plugin-anchor" href="#get-registryenrichment-strategies"><i class="fa fa-link" aria-hidden="true"></i></a>GET /registry/enrichment-strategies</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Lists all of the enrichment strategies supported by this Nakadi installation. Special or
+custom strategies besides the defaults will be listed here.</p>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Returns a list of all enrichment strategies known to Nakadi</td>
+<td>&lt; string &gt; array</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>schema-registry-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="registry-partition-strategies-get"></a></p>
+<h3 id="get-registrypartition-strategies"><a name="get-registrypartition-strategies" class="plugin-anchor" href="#get-registrypartition-strategies"><i class="fa fa-link" aria-hidden="true"></i></a>GET /registry/partition-strategies</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Lists all of the partition resolution strategies supported by this installation of Nakadi.
+Special or custom strategies besides the defaults will be listed here.</p>
+<p>Nakadi currently offers these inbuilt strategies:</p>
+<ul>
+<li><p><code>random</code>: Resolution of the target partition happens randomly (events are evenly
+distributed on the topic&apos;s partitions).</p>
+</li>
+<li><p><code>user_defined</code>: Target partition is defined by the client. As long as the indicated
+partition exists, Event assignment will respect this value. Correctness of the relative
+ordering of events is under the responsibility of the Producer.  Requires that the client
+provides the target partition on <code>metadata.partition</code> (See <code>EventMetadata</code>). Failure to do
+so will reject the publishing of the Event.</p>
+</li>
+<li><p><code>hash</code>: Resolution of the partition follows the computation of a hash from the value of
+the fields indicated in the EventType&apos;s <code>partition_key_fields</code>, guaranteeing that Events
+with same values on those fields end in the same partition. Given the event type&apos;s category
+is DataChangeEvent, field path is considered relative to &quot;data&quot;.</p>
+</li>
+</ul>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Returns a list of all partitioning strategies known to Nakadi</td>
+<td>&lt; string &gt; array</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Client is not authenticated</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>schema-registry-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="settings-blacklist-get"></a></p>
+<h3 id="get-settingsblacklist"><a name="get-settingsblacklist" class="plugin-anchor" href="#get-settingsblacklist"><i class="fa fa-link" aria-hidden="true"></i></a>GET /settings/blacklist</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Lists all blocked producers/consumers divided by app and event type.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Lists all blocked producers/consumers.</td>
+<td><a href="#settings-blacklist-get-response-200">Response 200</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="settings-blacklist-get-response-200"></a>
+<strong>Response 200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>consumers</strong>  <br><em>optional</em></td>
+<td>a list of all blocked consumers.</td>
+<td><a href="#settings-blacklist-get-consumers">consumers</a></td>
+</tr>
+<tr>
+<td><strong>producers</strong>  <br><em>optional</em></td>
+<td>a list of all blocked producers.</td>
+<td><a href="#settings-blacklist-get-producers">producers</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="settings-blacklist-get-consumers"></a>
+<strong>consumers</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>apps</strong>  <br><em>optional</em></td>
+<td>a list of all blocked apps for consuming events.</td>
+<td>&lt; string &gt; array</td>
+</tr>
+<tr>
+<td><strong>event_types</strong>  <br><em>optional</em></td>
+<td>a list of all blocked event types for consuming events.</td>
+<td>&lt; string &gt; array</td>
+</tr>
+</tbody>
+</table>
+<p><a name="settings-blacklist-get-producers"></a>
+<strong>producers</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>apps</strong>  <br><em>optional</em></td>
+<td>a list of all blocked apps for publishing events.</td>
+<td>&lt; string &gt; array</td>
+</tr>
+<tr>
+<td><strong>event_types</strong>  <br><em>optional</em></td>
+<td>a list of all blocked event types for publishing events.</td>
+<td>&lt; string &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>settings-api</li>
+</ul>
+<p><a name="settings-blacklist-blacklist_type-name-put"></a></p>
+<h3 id="put-settingsblacklistblacklisttypename"><a name="put-settingsblacklistblacklisttypename" class="plugin-anchor" href="#put-settingsblacklistblacklisttypename"><i class="fa fa-link" aria-hidden="true"></i></a>PUT /settings/blacklist/{blacklist_type}/{name}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Blocks publication/consumption for particular app or event type.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>blacklist_type</strong>  <br><em>required</em></td>
+<td>Type of the blacklist to put client into.<br><br>List of available types:<br>- &apos;CONSUMER_APP&apos;: consumer application.<br>- &apos;CONSUMER_ET&apos;: consumer event type.<br>- &apos;PRODUCER_APP&apos;: producer application.<br>- &apos;PRODUCER_ET&apos;: producer event type.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the client to block.</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Client or event type was successfully blocked.</td>
+<td>No Content</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>settings-api</li>
+</ul>
+<p><a name="settings-blacklist-blacklist_type-name-delete"></a></p>
+<h3 id="delete-settingsblacklistblacklisttypename"><a name="delete-settingsblacklistblacklisttypename" class="plugin-anchor" href="#delete-settingsblacklistblacklisttypename"><i class="fa fa-link" aria-hidden="true"></i></a>DELETE /settings/blacklist/{blacklist_type}/{name}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Unblocks publication/consumption for particular app or event type.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>blacklist_type</strong>  <br><em>required</em></td>
+<td>Type of the blacklist to put client into.<br><br>List of available types:<br>- &apos;CONSUMER_APP&apos;: consumer application.<br>- &apos;CONSUMER_ET&apos;: consumer event type.<br>- &apos;PRODUCER_APP&apos;: producer application.<br>- &apos;PRODUCER_ET&apos;: producer event type.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>name</strong>  <br><em>required</em></td>
+<td>Name of the client to unblock.</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Client was successfully unblocked.</td>
+<td>No Content</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>settings-api</li>
+</ul>
+<p><a name="settings-features-post"></a></p>
+<h3 id="post-settingsfeatures"><a name="post-settingsfeatures" class="plugin-anchor" href="#post-settingsfeatures"><i class="fa fa-link" aria-hidden="true"></i></a>POST /settings/features</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Enables or disables feature depends on the payload
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>feature</strong>  <br><em>required</em></td>
+<td><a href="definitions.html#feature">Feature</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Feature was successfully accepted.</td>
+<td>No Content</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>settings-api</li>
+</ul>
+<p><a name="settings-features-get"></a></p>
+<h3 id="get-settingsfeatures"><a name="get-settingsfeatures" class="plugin-anchor" href="#get-settingsfeatures"><i class="fa fa-link" aria-hidden="true"></i></a>GET /settings/features</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Lists all available features.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>A list of all available features.</td>
+<td><a href="#settings-features-get-response-200">Response 200</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="settings-features-get-response-200"></a>
+<strong>Response 200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>items</strong>  <br><em>required</em></td>
+<td>list of features.</td>
+<td>&lt; <a href="definitions.html#feature">Feature</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>settings-api</li>
+</ul>
+<p><a name="storages-post"></a></p>
+<h3 id="post-storages"><a name="post-storages" class="plugin-anchor" href="#post-storages"><i class="fa fa-link" aria-hidden="true"></i></a>POST /storages</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Creates a new storage backend.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>storage</strong>  <br><em>optional</em></td>
+<td>Storage description</td>
+<td><a href="definitions.html#storage">Storage</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>201</strong></td>
+<td>Storage backend was successfully registered. Returns storage object that was created.</td>
+<td><a href="definitions.html#storage">Storage</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>409</strong></td>
+<td>A storage with the same ID already exists</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>timelines-api</li>
+</ul>
+<p><a name="storages-get"></a></p>
+<h3 id="get-storages"><a name="get-storages" class="plugin-anchor" href="#get-storages"><i class="fa fa-link" aria-hidden="true"></i></a>GET /storages</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Lists all available storage backends.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>A list of all available storage backends.</td>
+<td>&lt; <a href="definitions.html#storage">Storage</a> &gt; array</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>timelines-api</li>
+</ul>
+<p><a name="storages-id-get"></a></p>
+<h3 id="get-storagesid"><a name="get-storagesid" class="plugin-anchor" href="#get-storagesid"><i class="fa fa-link" aria-hidden="true"></i></a>GET /storages/{id}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Retrieves a storage backend by its ID.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>id</strong>  <br><em>required</em></td>
+<td>storage backend ID</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td><a href="definitions.html#storage">Storage</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Storage backend not found</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>timelines-api</li>
+</ul>
+<p><a name="storages-id-delete"></a></p>
+<h3 id="delete-storagesid"><a name="delete-storagesid" class="plugin-anchor" href="#delete-storagesid"><i class="fa fa-link" aria-hidden="true"></i></a>DELETE /storages/{id}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Deletes a storage backend from its ID, if it is not in use.
+The oauth resource owner username has to be equal to &apos;nakadi.oauth2.adminClientId&apos; property
+to be able to access this endpoint.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>id</strong>  <br><em>required</em></td>
+<td>storage backend ID</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Storage backend was deleted</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Storage backend could not be deleted</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Storage backend not found</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>timelines-api</li>
+</ul>
+<p><a name="subscriptions-post"></a></p>
+<h3 id="post-subscriptions"><a name="post-subscriptions" class="plugin-anchor" href="#post-subscriptions"><i class="fa fa-link" aria-hidden="true"></i></a>POST /subscriptions</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>This endpoint creates a subscription for EventTypes. The subscription is needed to be able to
+consume events from EventTypes in a high level way when Nakadi stores the offsets and manages the
+rebalancing of consuming clients.
+The subscription is identified by its key parameters (owning_application, event_types, consumer_group). If
+this endpoint is invoked several times with the same key subscription properties in body (order of even_types is
+not important) - the subscription will be created only once and for all other calls it will just return
+the subscription that was already created.
+If per-EventType authorization is enabled, the caller must be authorized to read from all the EventTypes in the
+subscription.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>subscription</strong>  <br><em>required</em></td>
+<td>Subscription to create</td>
+<td><a href="definitions.html#subscription">Subscription</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Subscription for such parameters already exists. Returns subscription object that already<br>existed.  <br><strong>Headers</strong> :   <br><code>Location</code> (string) : The relative URI for this subscription resource.</td>
+<td><a href="definitions.html#subscription">Subscription</a></td>
+</tr>
+<tr>
+<td><strong>201</strong></td>
+<td>Subscription was successfuly created. Returns subscription object that was created.  <br><strong>Headers</strong> :   <br><code>Location</code> (string) : The relative URI for the created resource.  <br><code>Content-Location</code> (string) : If the Content-Location header is present and the same as the Location header the<br>client can assume it has an up to date representation of the Subscription and a<br>corresponding GET request is not needed.</td>
+<td><a href="definitions.html#subscription">Subscription</a></td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Bad Request</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access forbidden because of missing scope or EventType authorization failure.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable Entity</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>subscription-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-get"></a></p>
+<h3 id="get-subscriptions"><a name="get-subscriptions" class="plugin-anchor" href="#get-subscriptions"><i class="fa fa-link" aria-hidden="true"></i></a>GET /subscriptions</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Lists all subscriptions that exist in a system. List is ordered by creation date/time descending (newest
+subscriptions come first).</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>event_type</strong>  <br><em>optional</em></td>
+<td>Parameter to filter subscriptions list by event types. If not specified - the result list will contain<br>subscriptions for all event types. It&apos;s possible to provide multiple values like<br><code>event_type=et1&amp;event_type=et2</code>, in this case it will show subscriptions having both <code>et1</code> and <code>et2</code></td>
+<td>&lt; string &gt; array(multi)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>limit</strong>  <br><em>optional</em></td>
+<td>maximum number of subscriptions retuned in one page</td>
+<td>integer (int64)</td>
+<td><code>20</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>offset</strong>  <br><em>optional</em></td>
+<td>page offset</td>
+<td>integer (int64)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>owning_application</strong>  <br><em>optional</em></td>
+<td>Parameter to filter subscriptions list by owning application. If not specified - the result list will<br>contain subscriptions of all owning applications.</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td><a href="#subscriptions-get-response-200">Response 200</a></td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Bad Request</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-get-response-200"></a>
+<strong>Response 200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>_links</strong>  <br><em>required</em></td>
+<td></td>
+<td><a href="definitions.html#paginationlinks">PaginationLinks</a></td>
+</tr>
+<tr>
+<td><strong>items</strong>  <br><em>required</em></td>
+<td>list of subscriptions</td>
+<td>&lt; <a href="definitions.html#subscription">Subscription</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>subscription-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-get"></a></p>
+<h3 id="get-subscriptionssubscriptionid"><a name="get-subscriptionssubscriptionid" class="plugin-anchor" href="#get-subscriptionssubscriptionid"><i class="fa fa-link" aria-hidden="true"></i></a>GET /subscriptions/{subscription_id}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Returns a subscription identified by id.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>subscription_id</strong>  <br><em>required</em></td>
+<td>Id of subscription.</td>
+<td>string (uuid)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td><a href="definitions.html#subscription">Subscription</a></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Subscription not found</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>subscription-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-delete"></a></p>
+<h3 id="delete-subscriptionssubscriptionid"><a name="delete-subscriptionssubscriptionid" class="plugin-anchor" href="#delete-subscriptionssubscriptionid"><i class="fa fa-link" aria-hidden="true"></i></a>DELETE /subscriptions/{subscription_id}</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Deletes a subscription.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>subscription_id</strong>  <br><em>required</em></td>
+<td>Id of subscription.</td>
+<td>string (uuid)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Subscription was deleted</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Subscription not found</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>subscription-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-cursors-post"></a></p>
+<h3 id="post-subscriptionssubscriptionidcursors"><a name="post-subscriptionssubscriptionidcursors" class="plugin-anchor" href="#post-subscriptionssubscriptionidcursors"><i class="fa fa-link" aria-hidden="true"></i></a>POST /subscriptions/{subscription_id}/cursors</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Endpoint for committing offsets of the subscription. If there is uncommited data, and no commits happen
+for 60 seconds, then Nakadi will consider the client to be gone, and will close the connection. As long
+as no events are sent, the client does not need to commit.</p>
+<p>If the connection is closed, the client has 60 seconds to commit the events it received, from the moment
+they were sent. After that, the connection will be considered closed, and it will not be possible to do
+commit with that <code>X-Nakadi-StreamId</code> anymore.</p>
+<p>When a batch is committed that also automatically commits all previous batches that were
+sent in a stream for this partition.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Nakadi-StreamId</strong>  <br><em>required</em></td>
+<td>Id of stream which client uses to read events. It is not possible to make a commit for a terminated or<br>none-existing stream. Also the client can&apos;t commit something which was not sent to his stream.</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>subscription_id</strong>  <br><em>required</em></td>
+<td>Id of subscription</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>cursors</strong>  <br><em>optional</em></td>
+<td></td>
+<td><a href="#subscriptions-subscription_id-cursors-post-cursors">cursors</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-cursors-post-cursors"></a>
+<strong>cursors</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>items</strong>  <br><em>required</em></td>
+<td>List of cursors that the consumer acknowledges to have successfully processed.</td>
+<td>&lt; <a href="definitions.html#subscriptioncursor">SubscriptionCursor</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>At least one cursor which was tried to be committed is older or equal to already committed one. Array<br>of commit results is returned for this status code.</td>
+<td><a href="#subscriptions-subscription_id-cursors-post-response-200">Response 200</a></td>
+</tr>
+<tr>
+<td><strong>204</strong></td>
+<td>Offsets were committed</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Subscription not found</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable Entity</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-cursors-post-response-200"></a>
+<strong>Response 200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>items</strong>  <br><em>required</em></td>
+<td>list of items which describe commit result for each cursor</td>
+<td>&lt; <a href="definitions.html#cursorcommitresult">CursorCommitResult</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>subscription-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-cursors-get"></a></p>
+<h3 id="get-subscriptionssubscriptionidcursors"><a name="get-subscriptionssubscriptionidcursors" class="plugin-anchor" href="#get-subscriptionssubscriptionidcursors"><i class="fa fa-link" aria-hidden="true"></i></a>GET /subscriptions/{subscription_id}/cursors</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Exposes the currently committed offsets of a subscription.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>subscription_id</strong>  <br><em>required</em></td>
+<td>Id of subscription.</td>
+<td>string (uuid)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Ok</td>
+<td><a href="#subscriptions-subscription_id-cursors-get-response-200">Response 200</a></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Subscription not found</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-cursors-get-response-200"></a>
+<strong>Response 200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>items</strong>  <br><em>required</em></td>
+<td>list of cursors for subscription</td>
+<td>&lt; <a href="definitions.html#subscriptioncursor">SubscriptionCursor</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>subscription-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-cursors-patch"></a></p>
+<h3 id="patch-subscriptionssubscriptionidcursors"><a name="patch-subscriptionssubscriptionidcursors" class="plugin-anchor" href="#patch-subscriptionssubscriptionidcursors"><i class="fa fa-link" aria-hidden="true"></i></a>PATCH /subscriptions/{subscription_id}/cursors</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Endpoint for resetting subscription offsets.
+The subscription consumers will be disconnected during offset reset. The request can hang up until
+subscription commit timeout. During that time requests to subscription streaming endpoint
+will be rejected with 409. The clients should reconnect once the request is finished with 204.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>subscription_id</strong>  <br><em>required</em></td>
+<td>Id of subscription</td>
+<td>string</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td><strong>cursors</strong>  <br><em>optional</em></td>
+<td></td>
+<td><a href="#subscriptions-subscription_id-cursors-patch-cursors">cursors</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-cursors-patch-cursors"></a>
+<strong>cursors</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>items</strong>  <br><em>required</em></td>
+<td>List of cursors to reset subscription to.</td>
+<td>&lt; <a href="definitions.html#subscriptioncursorwithouttoken">SubscriptionCursorWithoutToken</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>204</strong></td>
+<td>Offsets were reset</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Subscription not found</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>409</strong></td>
+<td>Cursors reset is already in progress for provided subscription</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>422</strong></td>
+<td>Unprocessable Entity</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>subscription-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-events-get"></a></p>
+<h3 id="get-subscriptionssubscriptionidevents"><a name="get-subscriptionssubscriptionidevents" class="plugin-anchor" href="#get-subscriptionssubscriptionidevents"><i class="fa fa-link" aria-hidden="true"></i></a>GET /subscriptions/{subscription_id}/events</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>Starts a new stream for reading events from this subscription. The data will be automatically rebalanced
+between streams of one subscription. The minimal consumption unit is a partition, so it is possible to start as
+many streams as the total number of partitions in event-types of this subscription. The rebalance currently
+only operates with the number of partitions so the amount of data in event-types/partitions is not considered
+during autorebalance.
+The position of the consumption is managed by Nakadi. The client is required to commit the cursors he gets in
+a stream.</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Header</strong></td>
+<td><strong>X-Flow-Id</strong>  <br><em>optional</em></td>
+<td>The flow id of the request, which is written into the logs and passed to called services. Helpful<br>for operational troubleshooting and log analysis.</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>subscription_id</strong>  <br><em>required</em></td>
+<td>Id of subscription.</td>
+<td>string (uuid)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>batch_flush_timeout</strong>  <br><em>optional</em></td>
+<td>Maximum time in seconds to wait for the flushing of each chunk (per partition).<br><br><em> If the amount of buffered Events reaches <code>batch_limit</code> before this <code>batch_flush_timeout</code><br>is reached, the messages are immediately flushed to the client and batch flush timer is reset.<br><br></em> If 0 or undefined, will assume 30 seconds.</td>
+<td>number (int32)</td>
+<td><code>30</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>batch_limit</strong>  <br><em>optional</em></td>
+<td>Maximum number of <code>Event</code>s in each chunk (and therefore per partition) of the stream.</td>
+<td>integer (int32)</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>max_uncommitted_events</strong>  <br><em>optional</em></td>
+<td>The amount of uncommitted events Nakadi will stream before pausing the stream. When in paused<br>state and commit comes - the stream will resume. Minimal value is 1.</td>
+<td>integer (int32)</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>stream_keep_alive_limit</strong>  <br><em>optional</em></td>
+<td>Maximum number of empty keep alive batches to get in a row before closing the connection.<br><br>If 0 or undefined will send keep alive messages indefinitely.</td>
+<td>integer (int32)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>stream_limit</strong>  <br><em>optional</em></td>
+<td>Maximum number of <code>Event</code>s in this stream (over all partitions being streamed in this<br>connection).<br><br><em> If 0 or undefined, will stream batches indefinitely.<br><br></em> Stream initialization will fail if <code>stream_limit</code> is lower than <code>batch_limit</code>.</td>
+<td>integer (int32)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><strong>Query</strong></td>
+<td><strong>stream_timeout</strong>  <br><em>optional</em></td>
+<td>Maximum time in seconds a stream will live before connection is closed by the server.<br>If 0 or unspecified will stream indefinitely.<br><br>If this timeout is reached, any pending messages (in the sense of <code>stream_limit</code>) will be flushed<br>to the client.<br><br>Stream initialization will fail if <code>stream_timeout</code> is lower than <code>batch_flush_timeout</code>.</td>
+<td>number (int32)</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Ok. Stream started.<br>Stream format is a continuous series of <code>SubscriptionEventStreamBatch</code>s separated by <code>\n</code>  <br><strong>Headers</strong> :   <br><code>X-Nakadi-StreamId</code> (string) : the id of this stream generated by Nakadi. Must be used for committing events that were read by client<br>from this stream.</td>
+<td><a href="definitions.html#subscriptioneventstreambatch">SubscriptionEventStreamBatch</a></td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Bad Request</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Access is forbidden for the client or event type</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Subscription not found.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+<tr>
+<td><strong>409</strong></td>
+<td>Conflict. There are no empty slots for this subscriptions. The amount of consumers for this subscription<br>already equals the maximal value - the total amount of this subscription partitions.<br><br>This status code is also returned in the case of resetting subscription cursors request still in the<br>progress.</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>subscription-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-stats-get"></a></p>
+<h3 id="get-subscriptionssubscriptionidstats"><a name="get-subscriptionssubscriptionidstats" class="plugin-anchor" href="#get-subscriptionssubscriptionidstats"><i class="fa fa-link" aria-hidden="true"></i></a>GET /subscriptions/{subscription_id}/stats</h3>
+<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>exposes statistics of specified subscription</p>
+<h4 id="parameters"><a name="parameters" class="plugin-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>subscription_id</strong>  <br><em>required</em></td>
+<td>Id of subscription.</td>
+<td>string (uuid)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses"><a name="responses" class="plugin-anchor" href="#responses"><i class="fa fa-link" aria-hidden="true"></i></a>Responses</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>Ok</td>
+<td><a href="#subscriptions-subscription_id-stats-get-response-200">Response 200</a></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Subscription not found</td>
+<td><a href="definitions.html#problem">Problem</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="subscriptions-subscription_id-stats-get-response-200"></a>
+<strong>Response 200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>items</strong>  <br><em>required</em></td>
+<td>statistics list for specified subscription</td>
+<td>&lt; <a href="definitions.html#subscriptioneventtypestats">SubscriptionEventTypeStats</a> &gt; array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags"><a name="tags" class="plugin-anchor" href="#tags"><i class="fa fa-link" aria-hidden="true"></i></a>Tags</h4>
+<ul>
+<li>subscription-api</li>
+</ul>
+<h4 id="security"><a name="security" class="plugin-anchor" href="#security"><i class="fa fa-link" aria-hidden="true"></i></a>Security</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Scopes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oauth2</strong></td>
+<td><strong><a href="security.html#oauth2">oauth2</a></strong></td>
+<td>nakadi.event_stream.read</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="overview.html" class="navigation navigation-prev " aria-label="Previous page: API Reference">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="definitions.html" class="navigation navigation-next " aria-label="Next page: Definitions">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Paths","level":"1.5.1","depth":2,"next":{"title":"Definitions","level":"1.5.2","depth":2,"path":"docs/api-spec-generated/definitions.md","ref":"docs/api-spec-generated/definitions.md","articles":[]},"previous":{"title":"API Reference","level":"1.5","depth":1,"path":"docs/api-spec-generated/overview.md","ref":"docs/api-spec-generated/overview.md","articles":[{"title":"Paths","level":"1.5.1","depth":2,"path":"docs/api-spec-generated/paths.md","ref":"docs/api-spec-generated/paths.md","articles":[]},{"title":"Definitions","level":"1.5.2","depth":2,"path":"docs/api-spec-generated/definitions.md","ref":"docs/api-spec-generated/definitions.md","articles":[]},{"title":"Security","level":"1.5.3","depth":2,"path":"docs/api-spec-generated/security.md","ref":"docs/api-spec-generated/security.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{},"plugins":["-sharing","-search","-highlight","anchors"],"pluginsConfig":{"anchors":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/api-spec-generated/paths.md","mtime":"2017-07-18T08:49:49.775Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T08:50:41.936Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

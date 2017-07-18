@@ -1,0 +1,525 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Per-Event Type Authorization · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="clients.html" />
+    
+    
+    <link rel="prev" href="consuming-events-hila.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../using.html">
+            
+                <a href="../using.html">
+            
+                    
+                    Using Nakadi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="concepts.html">
+            
+                <a href="concepts.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="event-types.html">
+            
+                <a href="event-types.html">
+            
+                    
+                    Event Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="producing-events.html">
+            
+                <a href="producing-events.html">
+            
+                    
+                    Producing Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="consuming-events-lola.html">
+            
+                <a href="consuming-events-lola.html">
+            
+                    
+                    Consuming Events (Low-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="consuming-events-hila.html">
+            
+                <a href="consuming-events-hila.html">
+            
+                    
+                    Consuming Events (High-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.6" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Per-Event Type Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="clients.html">
+            
+                <a href="clients.html">
+            
+                    
+                    Client Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="comparison.html">
+            
+                <a href="comparison.html">
+            
+                    
+                    (partial) Compared to Other Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../api-spec-generated/overview.html">
+            
+                <a href="../api-spec-generated/overview.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../api-spec-generated/paths.html">
+            
+                <a href="../api-spec-generated/paths.html">
+            
+                    
+                    Paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../api-spec-generated/definitions.html">
+            
+                <a href="../api-spec-generated/definitions.html">
+            
+                    
+                    Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../api-spec-generated/security.html">
+            
+                <a href="../api-spec-generated/security.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../developing.html">
+            
+                <a href="../developing.html">
+            
+                    
+                    Building and Developing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../operating.html">
+            
+                <a href="../operating.html">
+            
+                    
+                    (todo) Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../recipes.html">
+            
+                <a href="../recipes.html">
+            
+                    
+                    (todo) Recipes and Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Per-Event Type Authorization</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="per-resource-authorization"><a name="per-resource-authorization" class="plugin-anchor" href="#per-resource-authorization"><i class="fa fa-link" aria-hidden="true"></i></a>Per-resource authorization</h2>
+<p>Nakadi allows users to restrict access to resources they own - currently, event types are the only resources supported, 
+but we plan to extend this feature to subscriptions in the near future.</p>
+<p>The authorization model is simple: policies can be attached to resources. A policy <code>P</code> defines which <code>subjects</code> can 
+perform which <code>operations</code> on a resource <code>R</code>. To do so, the policy contains, for each operation, a list of attributes that 
+represent subjects who are authorized to perform the operation on the resource. For a subject to be authorized, it needs 
+to match at least one of these attributes (not necessarily all of them).</p>
+<p>There are three kinds of operation: <code>admin</code>, to update the resource and delete it; <code>read</code>, to read events from the 
+resource; and <code>write</code>, to write events to the resource.</p>
+<p>An authorization request is represented by the tuple</p>
+<p><code>R(subject, operation, resource)</code></p>
+<p>The request will be approved iff the <code>resource</code> policy has at least one attribute for <code>operation</code> that matches the 
+subject.</p>
+<h2 id="protecting-an-event-type"><a name="protecting-an-event-type" class="plugin-anchor" href="#protecting-an-event-type"><i class="fa fa-link" aria-hidden="true"></i></a>Protecting an event type</h2>
+<p>Protecting an event type can be done either during the creation of the event type, or later, as an update to the event 
+type. Users simply need to add an authorization section to their event type description, which looks like this:</p>
+<pre><code class="lang-json">  &quot;authorization&quot;: {
+    &quot;admins&quot;: [{&quot;data_type&quot;: &quot;user&quot;, &quot;value&quot;: &quot;bfawlty&quot;}],
+    &quot;readers&quot;: [{&quot;data_type&quot;: &quot;user&quot;, &quot;value&quot;: &quot;bfawlty&quot;}],
+    &quot;writers&quot;: [{&quot;data_type&quot;: &quot;user&quot;, &quot;value&quot;: &quot;bfawlty&quot;}]
+  }
+</code></pre>
+<p>In this section, the <code>admins</code> list includes the attributes that authorize a subject to perform the <code>admin</code> operation; 
+the <code>readers</code> list includes the attributes that authorize a subject to perform the <code>read</code> operation; and the <code>writers</code> 
+list includes the attributes that authorize a subject to perform the <code>write</code> operation;</p>
+<p>Whenever an event type is created, or its authorization section is updated, all attributes are validated. The exact 
+nature of the validation depends on the plugin implementation.</p>
+<h3 id="creating-an-event-type"><a name="creating-an-event-type" class="plugin-anchor" href="#creating-an-event-type"><i class="fa fa-link" aria-hidden="true"></i></a>Creating an event type</h3>
+<p>Here is a sample request with an authorization section. It gives read, write, and admin access to a single attribute, 
+of type <code>service</code>:</p>
+<pre><code class="lang-bash">curl -v -XPOST -H &quot;Content-Type: application/json&quot; http://localhost:8080/event-types -d &apos;{
+  &quot;name&quot;: &quot;order_received&quot;,
+  &quot;owning_application&quot;: &quot;acme-order-service&quot;,
+  &quot;category&quot;: &quot;business&quot;,
+  &quot;partition_strategy&quot;: &quot;hash&quot;,
+  &quot;partition_key_fields&quot;: [&quot;order_number&quot;],
+  &quot;enrichment_strategies&quot;: [&quot;metadata_enrichment&quot;],
+  &quot;default_statistic&quot;: {
+    &quot;messages_per_minute&quot;: 1000,    
+    &quot;message_size&quot;:    5,
+    &quot;read_parallelism&quot;:    1,
+    &quot;write_parallelism&quot;: 1
+  },
+  &quot;schema&quot;: {
+    &quot;type&quot;: &quot;json_schema&quot;,
+    &quot;schema&quot;: &quot;{ \&quot;properties\&quot;: { \&quot;order_number\&quot;: { \&quot;type\&quot;: \&quot;string\&quot; } } }&quot;
+  },
+  &quot;authorization&quot;: {
+    &quot;admins&quot;: [{&quot;data_type&quot;: &quot;user&quot;, &quot;value&quot;: &quot;bfawlty&quot;}],
+    &quot;readers&quot;: [{&quot;data_type&quot;: &quot;user&quot;, &quot;value&quot;: &quot;bfawlty&quot;}],
+    &quot;writers&quot;: [{&quot;data_type&quot;: &quot;user&quot;, &quot;value&quot;: &quot;bfawlty&quot;}]
+  }
+}&apos;
+</code></pre>
+<h3 id="updating-an-event-type"><a name="updating-an-event-type" class="plugin-anchor" href="#updating-an-event-type"><i class="fa fa-link" aria-hidden="true"></i></a>Updating an event type</h3>
+<p>Updating an event type is similar to creating one. Here is a sample request, that gives read, write, and admin access 
+to the same application:</p>
+<pre><code class="lang-bash">curl -v -XPUT -H &quot;Content-Type: application/json&quot; http://localhost:8080/event-types/order_received -d &apos;{
+  &quot;name&quot;: &quot;order_received&quot;,
+  &quot;owning_application&quot;: &quot;acme-order-service&quot;,
+  &quot;category&quot;: &quot;business&quot;,
+  &quot;partition_strategy&quot;: &quot;hash&quot;,
+  &quot;partition_key_fields&quot;: [&quot;order_number&quot;],
+  &quot;enrichment_strategies&quot;: [&quot;metadata_enrichment&quot;],
+  &quot;default_statistic&quot;: {
+    &quot;messages_per_minute&quot;: 1000,    
+    &quot;message_size&quot;:    5,
+    &quot;read_parallelism&quot;:    1,
+    &quot;write_parallelism&quot;: 1
+  },
+  &quot;schema&quot;: {
+    &quot;type&quot;: &quot;json_schema&quot;,
+    &quot;schema&quot;: &quot;{ \&quot;properties\&quot;: { \&quot;order_number\&quot;: { \&quot;type\&quot;: \&quot;string\&quot; } } }&quot;
+  },
+  &quot;authorization&quot;: {
+    &quot;admins&quot;: [{&quot;data_type&quot;: &quot;user&quot;, &quot;value&quot;: &quot;bfawlty&quot;}],
+    &quot;readers&quot;: [{&quot;data_type&quot;: &quot;user&quot;, &quot;value&quot;: &quot;bfawlty&quot;}],
+    &quot;writers&quot;: [{&quot;data_type&quot;: &quot;user&quot;, &quot;value&quot;: &quot;bfawlty&quot;}]
+  }
+}&apos;
+</code></pre>
+<p>When updating an event type, users should keep in mind the following caveats:</p>
+<ul>
+<li>If the event type already has an authorization section, then it cannot be removed in an update;</li>
+<li>If the update changes the list of readers, then all consumers will be disconnected. It is expected that they will 
+try to reconnect, which will only work for those that are still authorized. <strong>WARNING</strong>: this <em>also</em> applies to consumers 
+using subscriptions; if a subscription includes multiple event types, and as a result of the update, a consumer loses 
+read access to one of them, then the consumer will not be able to consume from the subscription anymore.</li>
+</ul>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="consuming-events-hila.html" class="navigation navigation-prev " aria-label="Previous page: Consuming Events (High-level API)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="clients.html" class="navigation navigation-next " aria-label="Next page: Client Libraries">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Per-Event Type Authorization","level":"1.4.6","depth":2,"next":{"title":"Client Libraries","level":"1.4.7","depth":2,"path":"docs/using/clients.md","ref":"docs/using/clients.md","articles":[]},"previous":{"title":"Consuming Events (High-level API)","level":"1.4.5","depth":2,"path":"docs/using/consuming-events-hila.md","ref":"docs/using/consuming-events-hila.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{},"plugins":["-sharing","-search","-highlight","anchors"],"pluginsConfig":{"anchors":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/using/authorization.md","mtime":"2017-07-18T08:49:11.032Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T08:50:41.936Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

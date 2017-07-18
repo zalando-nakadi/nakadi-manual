@@ -1,0 +1,701 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Consuming Events (High-level API) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="authorization.html" />
+    
+    
+    <link rel="prev" href="consuming-events-lola.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../using.html">
+            
+                <a href="../using.html">
+            
+                    
+                    Using Nakadi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="concepts.html">
+            
+                <a href="concepts.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="event-types.html">
+            
+                <a href="event-types.html">
+            
+                    
+                    Event Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="producing-events.html">
+            
+                <a href="producing-events.html">
+            
+                    
+                    Producing Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="consuming-events-lola.html">
+            
+                <a href="consuming-events-lola.html">
+            
+                    
+                    Consuming Events (Low-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="consuming-events-hila.html">
+            
+                <a href="consuming-events-hila.html">
+            
+                    
+                    Consuming Events (High-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Per-Event Type Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="clients.html">
+            
+                <a href="clients.html">
+            
+                    
+                    Client Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="comparison.html">
+            
+                <a href="comparison.html">
+            
+                    
+                    (partial) Compared to Other Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../api-spec-generated/overview.html">
+            
+                <a href="../api-spec-generated/overview.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../api-spec-generated/paths.html">
+            
+                <a href="../api-spec-generated/paths.html">
+            
+                    
+                    Paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../api-spec-generated/definitions.html">
+            
+                <a href="../api-spec-generated/definitions.html">
+            
+                    
+                    Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../api-spec-generated/security.html">
+            
+                <a href="../api-spec-generated/security.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../developing.html">
+            
+                <a href="../developing.html">
+            
+                    
+                    Building and Developing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../operating.html">
+            
+                <a href="../operating.html">
+            
+                    
+                    (todo) Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../recipes.html">
+            
+                <a href="../recipes.html">
+            
+                    
+                    (todo) Recipes and Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Consuming Events (High-level API)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="consuming-events-with-the-high-level-api-subscriptions"><a name="consuming-events-with-the-high-level-api-subscriptions" class="plugin-anchor" href="#consuming-events-with-the-high-level-api-subscriptions"><i class="fa fa-link" aria-hidden="true"></i></a>Consuming events with the High-level API (Subscriptions)</h2>
+<p>Subscriptions (also knows as the high-level API) allow clients to consume events, where the Nakadi server store offsets and 
+automatically manages reblancing of partitions across consumer clients. This allows clients 
+to avoid managing stream state locally.</p>
+<p>The typical workflow when using subscriptions is:</p>
+<ol>
+<li><p>Create a Subscription specifying the event-types you want to read.</p>
+</li>
+<li><p>Start reading batches of events from the subscription. </p>
+</li>
+<li><p>Commit the cursors found in the event batches back to Nakadi, which will store the offsets. </p>
+</li>
+</ol>
+<p>If the connection is closed, and later restarted, clients will get events from 
+the point of your last cursor commit. If you need more than one client for your 
+subscription to distribute the load you can read the subscription with multiple 
+clients and Nakadi will balance the load across them.</p>
+<p>The following sections provide more detail on the Subscription API and basic 
+examples of Subscription API creation and usage:</p>
+<ul>
+<li><a href="#creating-subscriptions">Creating Subscriptions</a>: How to create a new Subscription and select the event types.</li>
+<li><a href="#consuming-events-from-a-subscription">Consuming Events from a Subscription</a>: How to connect to and consume batches from a Susbcription stream.</li>
+<li><a href="#client-rebalancing">Client Rebalancing</a>: Describes how clients for a Subscription are automatically assigned partitions, and how the API&apos;s <em>at-least-once</em> delivery guarantee works.</li>
+<li><a href="#subscription-cursors">Subscription Cursors</a>: Describes the structure of a Subscription batch cursor.</li>
+<li><a href="#committing-cursors">Committing Cursors</a>: How to send offset positions for a partition to Nakadi for storage.</li>
+<li><a href="#checking-current-position">Checking Current Position</a>: How to determine the current offsets for a Subscription.</li>
+<li><a href="#subscription-statistics">Subscription Statistics</a>: Viewing metrics for a Subscription.</li>
+<li><a href="#deleting-a-subscription">Deleting a Subscription</a>: How to remove a Subscription.</li>
+<li><a href="#getting-and-listing-subscriptions">Getting and Listing Subscriptions</a>: How to view individual an subscription and list existing susbcriptions.</li>
+</ul>
+<p>For a more detailed description and advanced configuration options please take a look at Nakadi <a href="api/nakadi-event-bus-api.yaml">swagger</a> file.</p>
+<h3 id="creating-subscriptions"><a name="creating-subscriptions" class="plugin-anchor" href="#creating-subscriptions"><i class="fa fa-link" aria-hidden="true"></i></a>Creating Subscriptions</h3>
+<p>A Subscription can be created by posting to the <code>/subscriptions</code> collection resource:</p>
+<pre><code class="lang-sh">curl -v -XPOST &quot;http://localhost:8080/subscriptions&quot; -H &quot;Content-type: application/json&quot; -d &apos;{
+    &quot;owning_application&quot;: &quot;order-service&quot;,
+    &quot;event_types&quot;: [&quot;order.ORDER_RECEIVED&quot;]
+  }&apos;
+</code></pre>
+<p>The response returns the whole Subscription object that was created, including the server generated <code>id</code> field:</p>
+<pre><code class="lang-sh">HTTP/1.1 201 Created
+Content-Type: application/json;charset=UTF-8
+
+{
+  &quot;owning_application&quot;: &quot;order-service&quot;,
+  &quot;event_types&quot;: [
+    &quot;order.ORDER_RECEIVED&quot;
+  ],
+  &quot;consumer_group&quot;: &quot;default&quot;,
+  &quot;read_from&quot;: &quot;end&quot;,
+  &quot;id&quot;: &quot;038fc871-1d2c-4e2e-aa29-1579e8f2e71f&quot;,
+  &quot;created_at&quot;: &quot;2016-09-23T16:35:13.273Z&quot;
+}
+</code></pre>
+<h3 id="consuming-events-from-a-subscription"><a name="consuming-events-from-a-subscription" class="plugin-anchor" href="#consuming-events-from-a-subscription"><i class="fa fa-link" aria-hidden="true"></i></a>Consuming Events from a Subscription</h3>
+<p>Consuming events is done by sending a GET request to the Subscriptions&apos;s event resource (<code>/subscriptions/{subscription-id}/events</code>): </p>
+<pre><code class="lang-sh">curl -v -XGET &quot;http://localhost:8080/subscriptions/038fc871-1d2c-4e2e-aa29-1579e8f2e71f/events&quot;
+</code></pre>
+<p>The response is a stream that groups events into JSON batches separated by an endline (<code>\n</code>) character. The output looks like this:</p>
+<pre><code class="lang-sh">HTTP/1.1 200 OK
+X-Nakadi-StreamId: 70779f46-950d-4e48-9fca-10c413845e7f
+Transfer-Encoding: chunked
+
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;5&quot;,&quot;offset&quot;:&quot;543&quot;,&quot;event_type&quot;:&quot;order.ORDER_RECEIVED&quot;,&quot;cursor_token&quot;:&quot;b75c3102-98a4-4385-a5fd-b96f1d7872f2&quot;},&quot;events&quot;:[{&quot;metadata&quot;:{&quot;occurred_at&quot;:&quot;1996-10-15T16:39:57+07:00&quot;,&quot;eid&quot;:&quot;1f5a76d8-db49-4144-ace7-e683e8ff4ba4&quot;,&quot;event_type&quot;:&quot;aruha-test-hila&quot;,&quot;partition&quot;:&quot;5&quot;,&quot;received_at&quot;:&quot;2016-09-30T09:19:00.525Z&quot;,&quot;flow_id&quot;:&quot;blahbloh&quot;},&quot;data_op&quot;:&quot;C&quot;,&quot;data&quot;:{&quot;order_number&quot;:&quot;abc&quot;,&quot;id&quot;:&quot;111&quot;},&quot;data_type&quot;:&quot;blah&quot;},&quot;info&quot;:{&quot;debug&quot;:&quot;Stream started&quot;}]}
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;5&quot;,&quot;offset&quot;:&quot;544&quot;,&quot;event_type&quot;:&quot;order.ORDER_RECEIVED&quot;,&quot;cursor_token&quot;:&quot;a28568a9-1ca0-4d9f-b519-dd6dd4b7a610&quot;},&quot;events&quot;:[{&quot;metadata&quot;:{&quot;occurred_at&quot;:&quot;1996-10-15T16:39:57+07:00&quot;,&quot;eid&quot;:&quot;1f5a76d8-db49-4144-ace7-e683e8ff4ba4&quot;,&quot;event_type&quot;:&quot;aruha-test-hila&quot;,&quot;partition&quot;:&quot;5&quot;,&quot;received_at&quot;:&quot;2016-09-30T09:19:00.741Z&quot;,&quot;flow_id&quot;:&quot;blahbloh&quot;},&quot;data_op&quot;:&quot;C&quot;,&quot;data&quot;:{&quot;order_number&quot;:&quot;abc&quot;,&quot;id&quot;:&quot;111&quot;},&quot;data_type&quot;:&quot;blah&quot;}]}
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;5&quot;,&quot;offset&quot;:&quot;545&quot;,&quot;event_type&quot;:&quot;order.ORDER_RECEIVED&quot;,&quot;cursor_token&quot;:&quot;a241c147-c186-49ad-a96e-f1e8566de738&quot;},&quot;events&quot;:[{&quot;metadata&quot;:{&quot;occurred_at&quot;:&quot;1996-10-15T16:39:57+07:00&quot;,&quot;eid&quot;:&quot;1f5a76d8-db49-4144-ace7-e683e8ff4ba4&quot;,&quot;event_type&quot;:&quot;aruha-test-hila&quot;,&quot;partition&quot;:&quot;5&quot;,&quot;received_at&quot;:&quot;2016-09-30T09:19:00.741Z&quot;,&quot;flow_id&quot;:&quot;blahbloh&quot;},&quot;data_op&quot;:&quot;C&quot;,&quot;data&quot;:{&quot;order_number&quot;:&quot;abc&quot;,&quot;id&quot;:&quot;111&quot;},&quot;data_type&quot;:&quot;blah&quot;}]}
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;0&quot;,&quot;offset&quot;:&quot;545&quot;,&quot;event_type&quot;:&quot;order.ORDER_RECEIVED&quot;,&quot;cursor_token&quot;:&quot;bf6ee7a9-0fe5-4946-b6d6-30895baf0599&quot;}}
+{&quot;cursor&quot;:{&quot;partition&quot;:&quot;1&quot;,&quot;offset&quot;:&quot;545&quot;,&quot;event_type&quot;:&quot;order.ORDER_RECEIVED&quot;,&quot;cursor_token&quot;:&quot;9ed8058a-95be-4611-a33d-f862d6dc4af5&quot;}}
+</code></pre>
+<p>Each batch contains the following fields:</p>
+<ul>
+<li><p><code>cursor</code>: The cursor of the batch which should be used for committing the batch.</p>
+</li>
+<li><p><code>events</code>: The array of events of this batch.</p>
+</li>
+<li><p><code>info</code>: An optional field that can hold useful information (e.g. the reason why the stream was closed by Nakadi).</p>
+</li>
+</ul>
+<p>Please also note that when stream is started, the client receives a header <code>X-Nakadi-StreamId</code> which must be used when committing cursors.</p>
+<p>To see a full list of parameters that can be used to control a stream of events, please see 
+an API specification in <a href="api/nakadi-event-bus-api.yaml">swagger</a> file.</p>
+<h3 id="client-rebalancing"><a name="client-rebalancing" class="plugin-anchor" href="#client-rebalancing"><i class="fa fa-link" aria-hidden="true"></i></a>Client Rebalancing</h3>
+<p>If you need more than one client for your subscription to distribute load or increase throughput - you can read the subscription with multiple clients and Nakadi will automatically balance the load across them.</p>
+<p>The balancing unit is the partition, so the number of clients of your subscription can&apos;t be higher 
+than the total number of all partitions of the event-types of your subscription. </p>
+<p>For example, suppose you had a subscription for two event-types <code>A</code> and <code>B</code>, with 2 and 4 partitions respectively. If you start reading events with a single client, then the client will get events from all 6 partitions. If a second client connects, then 3 partitions will be transferred from first client to a second client, resulting in each client consuming 3 partitions. In this case, the maximum possible number of clients for the subscription is 6, where each client will be allocated 1 partition to consume.</p>
+<p>The Subscription API provides a guarantee of <em>at-least-once</em> delivery. In practice this means clients can see a duplicate event in the case where there are errors <a href="#committing-cursors">committing events</a>.  However the events which were successfully committed will not be resent. </p>
+<p>A useful technique to detect and handle duplicate events on consumer side is to be idempotent and to check <code>eid</code> field of event metadata. Note: <code>eid</code> checking is not possible using the &quot;undefined&quot; category, as it&apos;s only supplied in the &quot;business&quot; and &quot;data&quot; categories.</p>
+<h3 id="subscription-cursors"><a name="subscription-cursors" class="plugin-anchor" href="#subscription-cursors"><i class="fa fa-link" aria-hidden="true"></i></a>Subscription Cursors</h3>
+<p>The cursors in the Subscription API have the following structure:</p>
+<pre><code class="lang-json">{
+  &quot;partition&quot;: &quot;5&quot;,
+  &quot;offset&quot;: &quot;543&quot;,
+  &quot;event_type&quot;: &quot;order.ORDER_RECEIVED&quot;,
+  &quot;cursor_token&quot;: &quot;b75c3102-98a4-4385-a5fd-b96f1d7872f2&quot;
+}
+</code></pre>
+<p>The fields are:</p>
+<ul>
+<li><p><code>partition</code>: The partition this batch belongs to. A batch can only have one partition.</p>
+</li>
+<li><p><code>offset</code>: The offset of this batch. The offset is server defined and opaque to the client - clients should not try to infer or assume a structure. </p>
+</li>
+<li><p><code>event_type</code>: Specifies the event-type of the cursor (as in one stream there can be events of different event-types);</p>
+</li>
+<li><p><code>cursor_token</code>: The cursor token generated by Nakadi.</p>
+</li>
+</ul>
+<h3 id="committing-cursors"><a name="committing-cursors" class="plugin-anchor" href="#committing-cursors"><i class="fa fa-link" aria-hidden="true"></i></a>Committing Cursors</h3>
+<p>Cursors can be committed by posting to Subscription&apos;s cursor resource (<code>/subscriptions/{subscriptionId}/cursors</code>), for example:</p>
+<pre><code class="lang-sh">curl -v -XPOST &quot;http://localhost:8080/subscriptions/038fc871-1d2c-4e2e-aa29-1579e8f2e71f/cursors&quot;\
+  -H &quot;X-Nakadi-StreamId: ae1e39c3-219d-49a9-b444-777b4b03e84c&quot; \
+  -H &quot;Content-type: application/json&quot; \
+  -d &apos;{
+    &quot;items&quot;: [
+      {
+        &quot;partition&quot;: &quot;0&quot;,
+        &quot;offset&quot;: &quot;543&quot;,
+        &quot;event_type&quot;: &quot;order.ORDER_RECEIVED&quot;,
+        &quot;cursor_token&quot;: &quot;b75c3102-98a4-4385-a5fd-b96f1d7872f2&quot;
+      },
+      {
+        &quot;partition&quot;: &quot;1&quot;,
+        &quot;offset&quot;: &quot;923&quot;,
+        &quot;event_type&quot;: &quot;order.ORDER_RECEIVED&quot;,
+        &quot;cursor_token&quot;: &quot;a28568a9-1ca0-4d9f-b519-dd6dd4b7a610&quot;
+      }
+    ]
+  }&apos;
+</code></pre>
+<p>Please be aware that <code>X-Nakadi-StreamId</code> header is required when doing a commit. The value should be the same as you get in <code>X-Nakadi-StreamId</code> header when opening a stream of events. Also, each client can commit only the batches that were sent to it.</p>
+<p>The possible successful responses for a commit are:</p>
+<ul>
+<li><p><code>204</code>: cursors were successfully committed and offset was increased.</p>
+</li>
+<li><p><code>200</code>: cursors were committed but at least one of the cursors didn&apos;t increase the offset as it was less or equal to already committed one. In a case of this response code user will get a json in a response body with a list of cursors and the results of their commits.</p>
+</li>
+</ul>
+<p>The timeout for commit is 60 seconds. If you open the stream, read data and don&apos;t commit
+anything for 60 seconds - the stream connection will be closed from Nakadi side. Please note
+that if there are no events available to send and you get only empty batches - there is no need
+to commit, Nakadi will close connection only if there is some uncommitted data and no
+commits happened for 60 seconds.</p>
+<p>If the connection is closed for some reason then the client still has 60 seconds to commit the events it received from the moment when the events were sent. After that the session
+will be considered closed and it will be not possible to do commits with that <code>X-Nakadi-StreamId</code>.
+If the commit was not done - then the next time you start reading from a subscription you
+will get data from the last point of your commit, and you will again receive the events you
+haven&apos;t committed.</p>
+<p>When a rebalance happens and a partition is transferred to another client - the commit timeout
+of 60 seconds saves the day again. The first client will have 60 seconds to do the commit for that partition, after that the partition is started to stream to a new client. So if the commit wasn&apos;t done in 60 seconds then the streaming will start from a point of last successful commit. In other case if the commit was done by the first client - the data from this partition will be immediately streamed to second client (because there is no uncommitted data left and there is no need to wait any more).</p>
+<p>It is not necessary to commit each batch. When the cursor is committed, all events that
+are before this cursor in the partition will also be considered committed. For example suppose the offset was at <code>e0</code> in the stream below,</p>
+<pre><code>partition: [ e0 | e1 | e2 | e3 | e4 | e5 | e6 | e7 | e8 | e9 ]
+     offset--^
+</code></pre><p>and the stream sent back three batches to the client, where the client committed batch 3 but not batch 1 or batch 2,</p>
+<pre><code>partition: [ e0 | e1 | e2 | e3 | e4 | e5 | e6 | e7 | e8 | e9 ]
+     offset--^       
+                |--- batch1 ---|--- batch2 ---|--- batch3 ---|
+                        |             |               |
+                        v             |               | 
+                [ e1 | e2 | e3 ]      |               |
+                                      v               |
+                               [ e4 | e5 | e6 ]       |
+                                                      v
+                                              [ e7 | e8 | e9 ]
+
+client: cursor commit --&gt; |--- batch3 ---|
+</code></pre><p>then the offset will be moved all the way up to <code>e9</code> implicitly committing all the events that were in the previous batches 1 and 2,</p>
+<pre><code>partition: [ e0 | e1 | e2 | e3 | e4 | e5 | e6 | e7 | e8 | e9 ]
+                                                          ^-- offset
+</code></pre><h3 id="checking-current-position"><a name="checking-current-position" class="plugin-anchor" href="#checking-current-position"><i class="fa fa-link" aria-hidden="true"></i></a>Checking Current Position</h3>
+<p>You can also check the current position of your subscription:</p>
+<pre><code class="lang-sh">curl -v -XGET &quot;http://localhost:8080/subscriptions/038fc871-1d2c-4e2e-aa29-1579e8f2e71f/cursors&quot;
+</code></pre>
+<p>The response will be a list of current cursors that reflect the last committed offsets:</p>
+<pre><code>HTTP/1.1 200 OK
+{
+  &quot;items&quot;: [
+    {
+      &quot;partition&quot;: &quot;0&quot;,
+      &quot;offset&quot;: &quot;8361&quot;,
+      &quot;event_type&quot;: &quot;order.ORDER_RECEIVED&quot;,
+      &quot;cursor_token&quot;: &quot;35e7480a-ecd3-488a-8973-3aecd3b678ad&quot;
+    },
+    {
+      &quot;partition&quot;: &quot;1&quot;,
+      &quot;offset&quot;: &quot;6214&quot;,
+      &quot;event_type&quot;: &quot;order.ORDER_RECEIVED&quot;,
+      &quot;cursor_token&quot;: &quot;d1e5d85e-1d8d-4a22-815d-1be1c8c65c84&quot;
+    }
+  ]
+}
+</code></pre><h3 id="subscription-statistics"><a name="subscription-statistics" class="plugin-anchor" href="#subscription-statistics"><i class="fa fa-link" aria-hidden="true"></i></a>Subscription Statistics</h3>
+<p>The API also provides statistics on your subscription:</p>
+<pre><code class="lang-sh">curl -v -XGET &quot;http://localhost:8080/subscriptions/038fc871-1d2c-4e2e-aa29-1579e8f2e71f/stats&quot;
+</code></pre>
+<p>The output will contain the statistics for all partitions of the stream:</p>
+<pre><code>HTTP/1.1 200 OK
+{
+  &quot;items&quot;: [
+    {
+      &quot;event_type&quot;: &quot;order.ORDER_RECEIVED&quot;,
+      &quot;partitions&quot;: [
+        {
+          &quot;partition&quot;: &quot;0&quot;,
+          &quot;state&quot;: &quot;reassigning&quot;,
+          &quot;unconsumed_events&quot;: 2115,
+          &quot;stream_id&quot;: &quot;b75c3102-98a4-4385-a5fd-b96f1d7872f2&quot;
+        },
+        {
+          &quot;partition&quot;: &quot;1&quot;,
+          &quot;state&quot;: &quot;assigned&quot;,
+          &quot;unconsumed_events&quot;: 1029,
+          &quot;stream_id&quot;: &quot;ae1e39c3-219d-49a9-b444-777b4b03e84c&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre><h3 id="deleting-a-subscription"><a name="deleting-a-subscription" class="plugin-anchor" href="#deleting-a-subscription"><i class="fa fa-link" aria-hidden="true"></i></a>Deleting a Subscription</h3>
+<p>To delete a Subscription, send a DELETE request to the Subscription resource using its <code>id</code> field (<code>/subscriptions/{id}</code>):</p>
+<pre><code class="lang-sh">curl -v -X DELETE &quot;http://localhost:8080/subscriptions/038fc871-1d2c-4e2e-aa29-1579e8f2e71f&quot;
+</code></pre>
+<p>Successful response:</p>
+<pre><code>HTTP/1.1 204 No Content
+</code></pre><h3 id="getting-and-listing-subscriptions"><a name="getting-and-listing-subscriptions" class="plugin-anchor" href="#getting-and-listing-subscriptions"><i class="fa fa-link" aria-hidden="true"></i></a>Getting and Listing Subscriptions</h3>
+<p>To view a Subscription send a GET request to the Subscription resource resource using its <code>id</code> field (<code>/subscriptions/{id}</code>): :</p>
+<pre><code class="lang-sh">curl -v -XGET &quot;http://localhost:8080/subscriptions/038fc871-1d2c-4e2e-aa29-1579e8f2e71f&quot;
+</code></pre>
+<p>Successful response:</p>
+<pre><code>HTTP/1.1 200 OK
+{
+  &quot;owning_application&quot;: &quot;order-service&quot;,
+  &quot;event_types&quot;: [
+    &quot;order.ORDER_RECEIVED&quot;
+  ],
+  &quot;consumer_group&quot;: &quot;default&quot;,
+  &quot;read_from&quot;: &quot;end&quot;,
+  &quot;id&quot;: &quot;038fc871-1d2c-4e2e-aa29-1579e8f2e71f&quot;,
+  &quot;created_at&quot;: &quot;2016-09-23T16:35:13.273Z&quot;
+}
+</code></pre><p>To get a list of subscriptions send a GET request to the Subscription collection resource:</p>
+<pre><code class="lang-sh">curl -v -XGET &quot;http://localhost:8080/subscriptions&quot;
+</code></pre>
+<p>Example answer:</p>
+<pre><code>HTTP/1.1 200 OK
+{
+  &quot;items&quot;: [
+    {
+      &quot;owning_application&quot;: &quot;order-service&quot;,
+      &quot;event_types&quot;: [
+        &quot;order.ORDER_RECEIVED&quot;
+      ],
+      &quot;consumer_group&quot;: &quot;default&quot;,
+      &quot;read_from&quot;: &quot;end&quot;,
+      &quot;id&quot;: &quot;038fc871-1d2c-4e2e-aa29-1579e8f2e71f&quot;,
+      &quot;created_at&quot;: &quot;2016-09-23T16:35:13.273Z&quot;
+    }
+  ],
+  &quot;_links&quot;: {
+    &quot;next&quot;: {
+      &quot;href&quot;: &quot;/subscriptions?offset=20&amp;limit=20&quot;
+    }
+  }
+}
+</code></pre><p>It&apos;s possible to filter the list with the following parameters: <code>event_type</code>, <code>owning_application</code>.<br>Also, the following pagination parameters are available: <code>offset</code>, <code>limit</code>.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="consuming-events-lola.html" class="navigation navigation-prev " aria-label="Previous page: Consuming Events (Low-level API)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="authorization.html" class="navigation navigation-next " aria-label="Next page: Per-Event Type Authorization">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Consuming Events (High-level API)","level":"1.4.5","depth":2,"next":{"title":"Per-Event Type Authorization","level":"1.4.6","depth":2,"path":"docs/using/authorization.md","ref":"docs/using/authorization.md","articles":[]},"previous":{"title":"Consuming Events (Low-level API)","level":"1.4.4","depth":2,"path":"docs/using/consuming-events-lola.md","ref":"docs/using/consuming-events-lola.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{},"plugins":["-sharing","-search","-highlight","anchors"],"pluginsConfig":{"anchors":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/using/consuming-events-hila.md","mtime":"2017-07-18T08:49:11.032Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T08:50:41.936Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

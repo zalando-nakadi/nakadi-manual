@@ -1,0 +1,607 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Event Types · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="producing-events.html" />
+    
+    
+    <link rel="prev" href="concepts.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../using.html">
+            
+                <a href="../using.html">
+            
+                    
+                    Using Nakadi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="concepts.html">
+            
+                <a href="concepts.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="event-types.html">
+            
+                <a href="event-types.html">
+            
+                    
+                    Event Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="producing-events.html">
+            
+                <a href="producing-events.html">
+            
+                    
+                    Producing Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="consuming-events-lola.html">
+            
+                <a href="consuming-events-lola.html">
+            
+                    
+                    Consuming Events (Low-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="consuming-events-hila.html">
+            
+                <a href="consuming-events-hila.html">
+            
+                    
+                    Consuming Events (High-level API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Per-Event Type Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="clients.html">
+            
+                <a href="clients.html">
+            
+                    
+                    Client Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="comparison.html">
+            
+                <a href="comparison.html">
+            
+                    
+                    (partial) Compared to Other Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../api-spec-generated/overview.html">
+            
+                <a href="../api-spec-generated/overview.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../api-spec-generated/paths.html">
+            
+                <a href="../api-spec-generated/paths.html">
+            
+                    
+                    Paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../api-spec-generated/definitions.html">
+            
+                <a href="../api-spec-generated/definitions.html">
+            
+                    
+                    Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../api-spec-generated/security.html">
+            
+                <a href="../api-spec-generated/security.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../developing.html">
+            
+                <a href="../developing.html">
+            
+                    
+                    Building and Developing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../operating.html">
+            
+                <a href="../operating.html">
+            
+                    
+                    (todo) Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../recipes.html">
+            
+                <a href="../recipes.html">
+            
+                    
+                    (todo) Recipes and Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Event Types</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="event-types"><a name="event-types" class="plugin-anchor" href="#event-types"><i class="fa fa-link" aria-hidden="true"></i></a>Event Types</h2>
+<p>The object containing the information describing an event is called an
+<em>event type</em>.</p>
+<p>To publish events an event type must exist in Nakadi. The event type
+contains information such as its name, a category, the owning application,
+strategies for partitioning and enriching data, and a
+<a href="http://json-schema.org/" target="_blank">JSON Schema</a>. Nakadi has an event type registry
+API that lists all the available event types.</p>
+<h3 id="event-types-and-categories"><a name="event-types-and-categories" class="plugin-anchor" href="#event-types-and-categories"><i class="fa fa-link" aria-hidden="true"></i></a>Event Types and Categories</h3>
+<p>There are three main <em>categories</em> of event type defined by Nakadi -</p>
+<ul>
+<li><p><strong>Undefined Event</strong>: A free form category suitable for events that are entirely custom to the producer.</p>
+</li>
+<li><p><strong>Data Change Event</strong>: An event that represents a change to a record or other item, or a new item. Change events are associated with a create, update, delete, or snapshot operation.</p>
+</li>
+<li><p><strong>Business Event</strong>: An event that is part of, or drives a business process, such as a state transition in a customer order.</p>
+</li>
+</ul>
+<p>Each event category enables different capabilities for an event type, notably their schema and validation rules, which we&apos;ll describe next.</p>
+<p><a class="anchor" href="#effective-schema" id="effective-schema"></a></p>
+<h3 id="event-type-schema-and-effective-schema"><a name="event-type-schema-and-effective-schema" class="plugin-anchor" href="#event-type-schema-and-effective-schema"><i class="fa fa-link" aria-hidden="true"></i></a>Event Type Schema and Effective Schema</h3>
+<p>The events for the &apos;business&apos; and &apos;data&apos; categories have their own pre-defined
+schema structures, based on JSON Schema, as well as a schema that is defined
+custom to the event type when it is created. The pre-defined structures
+describe common fields for an event and the custom schema for the event is
+defined when the event type is created.  </p>
+<p>The schema for an event type is submitted as a JSON Schema and will only declare the custom part of the event. This means the pre-defined schema for
+the &apos;business&apos; and &apos;data&apos; categories don&apos;t need to be declared (and should not
+be declared). The &apos;undefined&apos; category has no-predefined schema.</p>
+<p>When an event for one of these categories is posted to the server, it is
+expected to conform to the <em>combination</em> of the pre-defined schema and to the
+custom schema defined for the event type, and not just the custom part of the event. This combination is called the <em>effective schema</em> and is validated by Nakadi for the &apos;business&apos; and &apos;data&apos; types.</p>
+<p>The &apos;undefined` category behaves slightly different to the other categories. Its effective schema is exactly the same as the one created with its event type definition (it has no extra structure), but it is <strong>not</strong> validated by Nakadi. Instead an &apos;undefined&apos; event type&apos;s schema is simply made available in the event type registry for consumers to use if they wish.</p>
+<p>The custom schema for an event type can be as simple as
+<code>{ &quot;\additionalProperties\&quot;: true }</code> to allow arbitrary JSON, but will usually
+have a more specific definition :)</p>
+<h3 id="compatibility-modes"><a name="compatibility-modes" class="plugin-anchor" href="#compatibility-modes"><i class="fa fa-link" aria-hidden="true"></i></a>Compatibility modes</h3>
+<p>Compatibility modes are used to control schema changes. Each mode
+solves a specific problem and thus presents different constraints.</p>
+<p>Nakadi supports different compatibility modes for event types used to
+control valid schema changes and to ensure schema consistency of
+published event data. Compatibility modes define restrictions for
+event schema evolution, i.e. a set cascade of allowed schema changes
+and thereby different compatibility guarantees for event consumers.</p>
+<p>The default compatibility mode is <code>forward</code> compatible, but full
+compatibility usage is definitely encouraged, and the default mode
+will change in near future.</p>
+<h4 id="fully-compatible"><a name="fully-compatible" class="plugin-anchor" href="#fully-compatible"><i class="fa fa-link" aria-hidden="true"></i></a>Fully compatible</h4>
+<p>The <code>compatible</code> compatibility mode is the safest mode. It&apos;s both
+forward compatible and backward compatible. It means that:</p>
+<ol>
+<li>Consumers using older schemas can safely read events validated by
+newer schemas.</li>
+<li>Consumers using newer schemas can safely read events validated by
+older schemas.</li>
+</ol>
+<p>It guarantees high data quality, which is crucial for a variety of
+applications. At Zalando, it&apos;s required to use this compatibility mode
+to have data processed by business intelligence and long term event
+storage by the data lake.</p>
+<p>Supported changes:</p>
+<ol>
+<li>changes to meta attributes: titles and descriptions.</li>
+<li>addition of new optional attributes.</li>
+</ol>
+<p>The following json-schema attributes are not supported:</p>
+<ul>
+<li>additionalProperties</li>
+<li>additionalItems</li>
+<li>not</li>
+<li>patternProperties</li>
+</ul>
+<p>Removing the support for these attributes is necessary to avoid the
+introduction of incompatible changes.</p>
+<p>Under this compatibility mode, it&apos;s necessary to fully specify events
+properties in order for validation to succeed; events containing
+properties that are not declared in the schema will be rejected. For
+this reason, producers should first update their schemas with new
+attributes and only after that start producing events with such
+attributes.</p>
+<h4 id="forward-compatible"><a name="forward-compatible" class="plugin-anchor" href="#forward-compatible"><i class="fa fa-link" aria-hidden="true"></i></a>Forward compatible</h4>
+<p>The <code>forward</code> mode has been designed to allow event type owners to
+expand their schemas without breaking existing consumers.</p>
+<p>It&apos;s called forward because consumers using older schemas can safely
+read events generated by newer schemas. However, it&apos;s not backward
+compatible, in the sense that reading older events using newer schemas
+is not safe.</p>
+<p>Supported changes:</p>
+<ol>
+<li>changes to meta attributes: titles and descriptions.</li>
+<li>addition of new attributes, both optional and required.</li>
+<li>marking attributes as required.</li>
+</ol>
+<p>Under this mode event validation accepts events with fields not
+declared in the schema. In other words, it&apos;s not necessary to specify
+<code>additionalProperties true</code> in the schema, since this is the default
+behaviour of json-schema validator.</p>
+<p>We discourage the usage of <code>additionalProperties</code> entirely. The more
+complete a schema definition the more stable and valuable the
+events. The ability to not specify every attribute is there only for
+some very specific situations when it&apos;s not possible to define them
+all.</p>
+<p>Consumers reading events from forward compatible event types SHOULD
+ignore event attributes not declared in the event type schema. This is
+aligned with
+<a href="http://zalando.github.io/restful-api-guidelines/compatibility/Compatibility.html" target="_blank">API guidelines for compatibility</a>.</p>
+<h4 id="incompatible"><a name="incompatible" class="plugin-anchor" href="#incompatible"><i class="fa fa-link" aria-hidden="true"></i></a>Incompatible</h4>
+<p>Under compatibility mode <code>none</code> schemas can be changed
+arbitrarily. This mode is not recommended unless there is a very good
+reason not to provide any compatibility guarantee.</p>
+<h4 id="changing-compatibility-modes"><a name="changing-compatibility-modes" class="plugin-anchor" href="#changing-compatibility-modes"><i class="fa fa-link" aria-hidden="true"></i></a>Changing compatibility modes</h4>
+<p>It&apos;s possible to change the compatibility mode from <code>none</code> to
+<code>forward</code> and from <code>forward</code> to <code>compatible</code>, e.g. it&apos;s possible to
+make the schema validation more strict but never more relaxed.</p>
+<p>It&apos;s not possible to upgrade directly from <code>none</code> to
+<code>compatible</code>. It&apos;s necessary to go first through <code>forward</code> for later
+upgrading to <code>compatible</code>.</p>
+<p>Users should be aware about changes in validation behaviour when
+upgrading to <code>compatible</code>. Please, be sure to read the section on
+<code>compatible</code> mode above.</p>
+<h3 id="creating-an-event-type"><a name="creating-an-event-type" class="plugin-anchor" href="#creating-an-event-type"><i class="fa fa-link" aria-hidden="true"></i></a>Creating an Event Type</h3>
+<p>An event type can be created by posting to the <code>/event-types</code> resource.</p>
+<p>This example shows a <code>business</code> category event type called <code>order_received</code>:</p>
+<pre><code class="lang-sh">curl -v -XPOST -H &quot;Content-Type: application/json&quot; http://localhost:8080/event-types -d &apos;{
+  &quot;name&quot;: &quot;order_received&quot;,
+  &quot;owning_application&quot;: &quot;acme-order-service&quot;,
+  &quot;category&quot;: &quot;business&quot;,
+  &quot;partition_strategy&quot;: &quot;hash&quot;,
+  &quot;partition_key_fields&quot;: [&quot;order_number&quot;],
+  &quot;enrichment_strategies&quot;: [&quot;metadata_enrichment&quot;],
+  &quot;default_statistic&quot;: {
+    &quot;messages_per_minute&quot;: 1000,    
+    &quot;message_size&quot;:    5,
+    &quot;read_parallelism&quot;:    1,
+    &quot;write_parallelism&quot;: 1
+  },
+  &quot;schema&quot;: {
+    &quot;type&quot;: &quot;json_schema&quot;,
+    &quot;schema&quot;: &quot;{ \&quot;properties\&quot;: { \&quot;order_number\&quot;: { \&quot;type\&quot;: \&quot;string\&quot; } } }&quot;
+  }
+}&apos;
+</code></pre>
+<p>The event type has a simple JSON Schema submitted as an escaped JSON string describing the <code>order number</code> and thus only declare the custom part of the schema. The <code>partition_strategy</code>
+says events will be allocated to partitions according to the hash of the <code>order_number</code> field, defined in <code>partition_key_fields</code>, and the owner&apos;s name is
+<code>&quot;acme-order-service&quot;</code>. The <code>enrichment_strategies</code> array says to apply <code>metadata_enrichment</code> to submitted events (common metadata is a feature of some categories).</p>
+<p>The event type has an optional <code>default_statistic</code> object, which controls the number of partitions. Nakadi will use a sensible default if no value is provided. The values provided here 
+cannot be changed later, so choose them wisely. </p>
+<p>A successful request will result in a <code>201 Created</code> response.</p>
+<p>Once an event type is created, it is added to the <em>event type registry</em> and its details are visible from its URI in the registry. Events can then be posted to its stream and consumed by multiple clients.</p>
+<p>The exact required fields depend on the event type&apos;s category, but <code>name</code>, <code>owning_application</code> and <code>schema</code> are always expected. The
+<a href="../api-spec-generated/overview.html">&quot;API Reference&quot;</a> contains more details on event types.</p>
+<h3 id="partitions"><a name="partitions" class="plugin-anchor" href="#partitions"><i class="fa fa-link" aria-hidden="true"></i></a>Partitions</h3>
+<p>An event type&apos;s stream is divided into one or more <em>partitions</em> and each event is placed into exactly one partition. Partitions preserve the order of events - once an event is added to a partition its position relative to other events in the partition is never changed. The details of the partitions and their offsets for an event type are available via its <code>/partitions</code> resource.</p>
+<h4 id="partition-ordering"><a name="partition-ordering" class="plugin-anchor" href="#partition-ordering"><i class="fa fa-link" aria-hidden="true"></i></a>Partition Ordering</h4>
+<p>Each partition is a fully ordered log, and there is no global ordering across partitions. Clients can consume a stream&apos;s partitions independently and track their position across the stream.</p>
+<p><img src="../images/partitions.png" alt="/images/partitions.png"></p>
+<p>Dividing a stream this way allows the overall system to be scaled and provide
+good throughput for producers and consumers. It&apos;s similar to how systems such as <a href="http://kafka.apache.org/documentation.html#intro_topics" target="_blank">Apache Kafka</a> and AWS Kinesis work.</p>
+<h4 id="partition-strategies"><a name="partition-strategies" class="plugin-anchor" href="#partition-strategies"><i class="fa fa-link" aria-hidden="true"></i></a>Partition Strategies</h4>
+<p>The assignment of events to a partition is controllable by the producer. The
+<code>partition_strategy</code> field determines how events are mapped to partitions. Nakadi offers the following strategies:</p>
+<ul>
+<li><p><code>random</code>: the partition is selected randomly and events will be evenly distributed across partitions. Random is the default option used by Nakadi.</p>
+</li>
+<li><p><code>hash</code>: the partition is selected by hashing the value of the fields
+defined in the event type&apos;s <code>partition_key_fields</code>. In practice this means events that are about the same logical entity and which have the same values for the partition key will be sent to the same partition.</p>
+</li>
+<li><p><code>user_defined</code>: the partition is set by the producer when sending an event. This option is only available for the &apos;business&apos; and data&apos; categories.</p>
+</li>
+</ul>
+<p>Which option to use depends on your requirements. When order matters, hash is usually the right choice. For very high volume streams where order doesn&apos;t matter, random can be a good choice as it load balances data well. The user defined option is a power tool, unless you know you need it, use hash or random. Hash is the preferred strategy, as it ensures that duplicated events will end up in the same partition.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="concepts.html" class="navigation navigation-prev " aria-label="Previous page: Concepts">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="producing-events.html" class="navigation navigation-next " aria-label="Next page: Producing Events">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Event Types","level":"1.4.2","depth":2,"next":{"title":"Producing Events","level":"1.4.3","depth":2,"path":"docs/using/producing-events.md","ref":"docs/using/producing-events.md","articles":[]},"previous":{"title":"Concepts","level":"1.4.1","depth":2,"path":"docs/using/concepts.md","ref":"docs/using/concepts.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{},"plugins":["-sharing","-search","-highlight","anchors"],"pluginsConfig":{"anchors":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/using/event-types.md","mtime":"2017-07-18T08:49:11.032Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T08:50:41.936Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
