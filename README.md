@@ -29,7 +29,7 @@ The section ["Comparison to Other Systems"](https://github.com/zalando-nakadi/na
 
 #### Subscription API
 
-The [API reference](http://zalando.github.io/nakadi-manual/docs/api-spec-generated/overview.html) focuses on the existing core API. The project is also planning a higher level _subscription API_.  The details are to be finalised but the features are likely to be:
+The [API reference](https://zalando.github.io/nakadi/manual.html) focuses on the existing core API. The project is also planning a higher level _subscription API_.  The details are to be finalised but the features are likely to be:
 
  - Basic functionality for supporting consumer groups via a subscription.
  - Server managed and persisted checkpointing of partition cursors.
